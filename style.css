@@ -1,0 +1,75 @@
+body {
+	background-color: #000;
+}
+
+@font-face {
+	font-family: "Noto";
+	src: url("./fonts/Noto.otf") format("opentype");
+}
+@font-face {
+	font-family: "Bios Regular";
+	src: url("./fonts/Bios-Regular.otf") format("opentype");
+}
+
+p {
+	margin: 0;
+}
+#companyLogo {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#chinese {
+	font-family: "Noto";
+	font-size: 40px;
+}
+#chineseTagline {
+	font-family: "Noto";
+	font-size: 30px;
+	letter-spacing: 0.7ch;
+}
+.chineseShadow {
+	/* use black as the color and remove the second shadow for normal text w/o blur */
+	color: transparent;
+	text-shadow: 2px 2px #00FF00, 0 0 4px #000;
+	text-shadow:
+		-1px -1px rgba(214, 0, 255, 0.6),
+		1px 1px rgba(0, 184, 255, 0.6);
+	/*-2px -2px 0 rgba(0, 184, 255, 0.5);*/
+}
+
+#companyName {
+	font-family: "Bios Regular";
+	font-size: 90px;
+	color: transparent;
+	text-shadow:
+		-3px -3px 1px rgba(214, 0, 255, 0.6),
+		3px 3px 1px rgba(0, 184, 255, 0.6);
+}
+#companyType {
+	font-family: "Bios Regular";
+	font-size: 30px;
+	letter-spacing: 0.5ch;
+	color: transparent;
+
+	text-shadow:
+		-1px -1px rgba(214, 0, 255, 0.6),
+		1px 1px rgba(0, 184, 255, 0.6);
+}
+
+#tagline {
+	font-family: "Lucida Console";
+	font-size: 24px;
+	color: white;
+	letter-spacing: -1px;
+	text-shadow: 0 0 3px #FFFFFF;
+	margin-top: 35px;
+}
