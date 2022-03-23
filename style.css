@@ -1,3 +1,12 @@
+:root {
+	--pink: rgba(214, 0, 255, 0.6);
+	--blue: rgba(0, 184, 255, 0.6);
+}
+
+::selection {
+  background: rgba(214, 0, 255, 0.4);
+}
+
 body {
 	background-color: #000;
 }
@@ -38,8 +47,8 @@ nav {
 	color: #FFFFFF;
 	margin-left: 10px;
 	text-shadow:
-		-4px -4px rgba(214, 0, 255, 0.6),
-		4px 4px rgba(0, 184, 255, 0.6);
+		-4px -4px var(--pink),
+		4px 4px var(--blue);
 }
 
 #neonSplash {
@@ -67,8 +76,8 @@ nav {
 .chineseShadow {
 	color: transparent;
 	text-shadow:
-		-1px -1px rgba(214, 0, 255, 0.6),
-		1px 1px rgba(0, 184, 255, 0.6);
+		-1px -1px var(--pink),
+		1px 1px var(--blue);
 }
 
 #companyName {
@@ -76,8 +85,8 @@ nav {
 	font-size: 90px;
 	color: transparent;
 	text-shadow:
-		-3px -3px 1px rgba(214, 0, 255, 0.6),
-		3px 3px 1px rgba(0, 184, 255, 0.6);
+		-3px -3px 1px var(--pink),
+		3px 3px 1px var(--blue);
 }
 #companyType {
 	font-family: "Bios Regular";
@@ -86,8 +95,8 @@ nav {
 	color: transparent;
 
 	text-shadow:
-		-1px -1px rgba(214, 0, 255, 0.6),
-		1px 1px rgba(0, 184, 255, 0.6);
+		-1px -1px var(--pink),
+		1px 1px var(--blue);
 }
 
 #tagline {
