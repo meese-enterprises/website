@@ -6,9 +6,17 @@ p {
 	margin: 0;
 }
 
+/*
+ * TODO: Transition all of these fonts to minified versions
+ * and a CDN in case the client has some cached.
+ */
 @font-face {
 	font-family: "Noto";
 	src: url("./fonts/Noto.otf") format("opentype");
+}
+@font-face {
+	font-family: "Hermes";
+	src: url("./fonts/Hermes.otf") format("opentype");
 }
 @font-face {
 	font-family: "Bios Regular";
@@ -24,8 +32,14 @@ nav {
 }
 
 #navLogo {
-	height: 100%;
-	border-radius: 7.5px;
+	font-family: "Hermes";
+	font-size: 50px;
+	text-decoration: none;
+	color: #FFFFFF;
+	margin-left: 10px;
+	text-shadow:
+		-4px -4px rgba(214, 0, 255, 0.6),
+		4px 4px rgba(0, 184, 255, 0.6);
 }
 
 #neonSplash {
@@ -51,13 +65,10 @@ nav {
 	letter-spacing: 0.7ch;
 }
 .chineseShadow {
-	/* use black as the color and remove the second shadow for normal text w/o blur */
 	color: transparent;
-	text-shadow: 2px 2px #00FF00, 0 0 4px #000;
 	text-shadow:
 		-1px -1px rgba(214, 0, 255, 0.6),
 		1px 1px rgba(0, 184, 255, 0.6);
-	/*-2px -2px 0 rgba(0, 184, 255, 0.5);*/
 }
 
 #companyName {
