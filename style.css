@@ -11,10 +11,6 @@ body {
 	background-color: #000;
 }
 
-p {
-	margin: 0;
-}
-
 /*
  * TODO: Transition all of these fonts to minified versions
  * and a CDN in case the client has some cached.
@@ -64,7 +60,7 @@ nav {
 	transform: translateY(-50%);
 }
 
-#chinese {
+#chineseName {
 	font-family: "Noto";
 	font-size: 40px;
 }
@@ -106,4 +102,16 @@ nav {
 	letter-spacing: -1px;
 	text-shadow: 0 0 3px #FFFFFF;
 	margin-top: 35px;
+}
+
+@media screen and (max-width: 500px) {
+  #chineseName {
+		font-size: 30px;
+	}
+	#companyName {
+		font-size: 60px;
+	}
+	#companyType {
+		font-size: 20px;
+	}
 }
