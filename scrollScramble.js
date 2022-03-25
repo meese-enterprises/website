@@ -14,19 +14,19 @@ Array.prototype.shuffle = function () {
 	}
 
 	return input;
-}
+};
 
 /**
  * Modified from https://codepen.io/blazicke/pen/dQjxMr
  */
-const stringRandom = (function() {
+const stringRandom = (function () {
 	const data = {
 		isScrolling: false,
 		repeat: 0,
 		target: [],
 		letters: "*+-/@_$[%£!XO1&>",
 		originalStrings: [],
-		singleLetters: []
+		singleLetters: [],
 	};
 
 	function checkLength(x) {
@@ -38,7 +38,10 @@ const stringRandom = (function() {
 			letter.classList.add("is-changing");
 			letter.style.animationDuration = Math.random().toFixed(2) + "s";
 
-			const newChar = data.letters.substr(Math.random() * data.letters.length, 1);
+			const newChar = data.letters.substr(
+				Math.random() * data.letters.length,
+				1
+			);
 			letter.textContent = newChar;
 			letter.setAttribute("data-txt", newChar);
 		}
@@ -59,7 +62,9 @@ const stringRandom = (function() {
 			data.originalStrings[index] = text;
 
 			for (let i = 0; i < text.length; i++) {
-				textDivided += `<span class="scrambling scrollScramble-${index}-span-${i}" data-txt="${text.charAt(i)}" data-original="${text.charAt(i)}">${text.charAt(i)}</span>`;
+				textDivided += `<span class="scrambling scrollScramble-${index}-span-${i}" data-txt="${text.charAt(
+					i
+				)}" data-original="${text.charAt(i)}">${text.charAt(i)}</span>`;
 			}
 
 			element.innerHTML = textDivided;
@@ -81,7 +86,7 @@ const stringRandom = (function() {
 
 	/** Reset to initial letters */
 	function resetLetters() {
-		let randomArray = [];
+		const randomArray = [];
 		for (let i = 0; i < data.singleLetters.length; i++) {
 			randomArray.push(i);
 		}
@@ -90,7 +95,7 @@ const stringRandom = (function() {
 		randomArray.forEach(function (el, index) {
 			setTimeout(function () {
 				resetLetter(data.singleLetters[el]);
-			}, (index * 20 * (Math.random() * 5))).toFixed(2);
+			}, index * 20 * (Math.random() * 5)).toFixed(2);
 		});
 	}
 
@@ -102,10 +107,10 @@ const stringRandom = (function() {
 			resetLetters();
 			clearTimeout(this);
 		}, 300);
-	};
+	}
 
 	return {
-		init: function(selector) {
+		init: function (selector) {
 			if (checkLength(selector)) {
 				data.targets = Array.from(document.querySelectorAll(selector));
 				divideLetters();
@@ -115,8 +120,8 @@ const stringRandom = (function() {
 				// more than 100% of the viewer height
 				window.addEventListener("wheel", updateScrollState);
 			}
-		}
-	}
+		},
+	};
 })();
 
 stringRandom.init(".scrollScramble");

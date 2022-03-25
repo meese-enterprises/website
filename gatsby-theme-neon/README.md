@@ -15,12 +15,12 @@ here for educational purposes.
 
 ```javascript
 module.exports = {
-  plugins: [
-    {
-      resolve: 'gatsby-theme-mate',
-      options: {},
-    },
-  ],
+	plugins: [
+		{
+			resolve: "gatsby-theme-mate",
+			options: {},
+		},
+	],
 };
 ```
 
@@ -35,10 +35,10 @@ resources error. Create a simple page in `src/pages/index.js` to see a
 page on the root url.
 
 ```jsx
-import React from 'react';
+import React from "react";
 
 export default function Home() {
-  return <div>My Site!</div>;
+	return <div>My Site!</div>;
 }
 ```
 
