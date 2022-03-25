@@ -1,20 +1,20 @@
 {
-  "name": "website",
+	"name": "website",
 	"private": true,
-  "version": "0.0.0",
-  "main": "index.js",
-  "author": "@emasuriano",
-  "license": "MIT",
-  "scripts": {
-    "start": "gatsby develop",
-    "clean": "gatsby clean",
-    "serve": "gatsby serve -p 5000",
-    "build": "gatsby build"
-  },
-  "dependencies": {
-    "gatsby": "^4.10.1",
-    "gatsby-theme-neon": "file:../gatsby-theme-neon",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+	"version": "0.0.0",
+	"main": "index.js",
+	"author": "@emasuriano",
+	"license": "MIT",
+	"scripts": {
+		"start": "gatsby develop",
+		"clean": "gatsby clean",
+		"serve": "gatsby serve -p 5000",
+		"build": "gatsby build"
+	},
+	"dependencies": {
+		"gatsby": "^4.10.1",
+		"gatsby-theme-neon": "file:../gatsby-theme-neon",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	}
 }

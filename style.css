@@ -4,7 +4,7 @@
 }
 
 ::selection {
-  background: rgba(214, 0, 255, 0.4);
+	background: rgba(214, 0, 255, 0.4);
 }
 
 body {
@@ -41,11 +41,9 @@ nav {
 	font-family: "Hermes";
 	font-size: 50px;
 	text-decoration: none;
-	color: #FFFFFF;
+	color: #ffffff;
 	margin-left: 10px;
-	text-shadow:
-		-4px -4px var(--pink),
-		4px 4px var(--blue);
+	text-shadow: -4px -4px var(--pink), 4px 4px var(--blue);
 }
 
 #neonSplash {
@@ -72,18 +70,14 @@ nav {
 }
 .chineseShadow {
 	color: transparent;
-	text-shadow:
-		-1px -1px var(--pink),
-		1px 1px var(--blue);
+	text-shadow: -1px -1px var(--pink), 1px 1px var(--blue);
 }
 
 #companyName {
 	font-family: "Bios Regular";
 	font-size: 90px;
 	color: transparent;
-	text-shadow:
-		-3px -3px 1px var(--pink),
-		3px 3px 1px var(--blue);
+	text-shadow: -3px -3px 1px var(--pink), 3px 3px 1px var(--blue);
 }
 #companyType {
 	font-family: "Bios Regular";
@@ -91,9 +85,7 @@ nav {
 	letter-spacing: 0.5ch;
 	color: transparent;
 
-	text-shadow:
-		-1px -1px var(--pink),
-		1px 1px var(--blue);
+	text-shadow: -1px -1px var(--pink), 1px 1px var(--blue);
 }
 
 #tagline {
@@ -101,12 +93,12 @@ nav {
 	font-size: 24px;
 	color: white;
 	letter-spacing: -1px;
-	text-shadow: 0 0 3px #FFFFFF;
+	text-shadow: 0 0 3px #ffffff;
 	margin-top: 35px;
 }
 
 @media screen and (max-width: 500px) {
-  #chineseName {
+	#chineseName {
 		font-size: 30px;
 	}
 	#companyName {

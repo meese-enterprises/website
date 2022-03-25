@@ -62,16 +62,16 @@ html {
 @keyframes changingAfter {
 	0% {
 		opacity: 0.3;
-		transform: translateX(10px) scaleX(2)
+		transform: translateX(10px) scaleX(2);
 	}
 
 	50% {
 		opacity: 0;
-		transform: translateX(0) scaleX(2)
+		transform: translateX(0) scaleX(2);
 	}
 
 	100% {
 		opacity: 0.3;
-		transform: translateX(-10px) scaleX(2)
+		transform: translateX(-10px) scaleX(2);
 	}
 }
