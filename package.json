@@ -1,0 +1,27 @@
+{
+  "name": "gatsby-starter-theme-workspace",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "0BSD",
+  "scripts": {
+    "example": "env-cmd --silent yarn workspace example",
+    "theme": "env-cmd --silent yarn workspace gatsby-theme-mate",
+    "clean": "yarn example clean",
+    "start": "yarn example start",
+    "build": "yarn example build",
+    "serve": "yarn example serve",
+    "test": "yarn example test",
+    "test:ci": "yarn build && start-server-and-test serve 5000",
+    "check-types": "yarn theme check-types",
+    "release": "yarn theme release"
+  },
+  "workspaces": [
+    "gatsby-theme-mate",
+    "example"
+  ],
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "start-server-and-test": "^1.14.0"
+  }
+}
