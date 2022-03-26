@@ -37,7 +37,7 @@ export default class ScrambleLetters {
 		this.animationInterval = () => getRandomInt(8500, 14500);
 
 		this.init();
-	};
+	}
 
 	init() {
 		if (!this.checkLength(this.selector)) return;
@@ -49,7 +49,7 @@ export default class ScrambleLetters {
 		setTimeout(() => {
 			this.startScramble();
 		}, this.initialDelay);
-	};
+	}
 
 	startScramble() {
 		this.changeLetters();
@@ -70,7 +70,7 @@ export default class ScrambleLetters {
 
 	checkLength(selector) {
 		return Array.from(document.querySelectorAll(selector)).length > 0;
-	};
+	}
 
 	changeLetter(letter) {
 		if (letter.textContent != " ") {
@@ -84,14 +84,14 @@ export default class ScrambleLetters {
 			letter.textContent = newChar;
 			letter.setAttribute("data-txt", newChar);
 		}
-	};
+	}
 
 	resetLetter(letter) {
 		const originalValue = letter.getAttribute("data-original");
 		letter.classList.remove("is-changing");
 		letter.textContent = originalValue;
 		letter.setAttribute("data-txt", originalValue);
-	};
+	}
 
 	divideLetters() {
 		this.targets.forEach((element, index) => {
@@ -110,7 +110,7 @@ export default class ScrambleLetters {
 		});
 
 		this.singleLetters = document.querySelectorAll(".scrambling");
-	};
+	}
 
 	changeLetters() {
 		if (this.isScrambling) {
@@ -120,7 +120,7 @@ export default class ScrambleLetters {
 		}
 
 		setTimeout(this.changeLetters.bind(this), 10);
-	};
+	}
 
 	/** Reset to initial letters */
 	resetLetters() {
@@ -135,5 +135,5 @@ export default class ScrambleLetters {
 				this.resetLetter(this.singleLetters[el]);
 			}, index * 20 * (Math.random() * 5)).toFixed(2);
 		});
-	};
-};
+	}
+}
