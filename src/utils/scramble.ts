@@ -1,7 +1,7 @@
 declare global {
-  interface Array<T> {
-    shuffle(): Array<T>;
-  }
+	interface Array<T> {
+		shuffle(): Array<T>;
+	}
 }
 
 /**
