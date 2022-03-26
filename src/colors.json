@@ -1,11 +1,11 @@
 {
+	"primary": "transparent",
+	"secondary": "#ff4081",
+	"muted": "#f0e6f6",
 	"lightText": "#FFFFFF",
 	"darkText": "#050505",
 	"darkBackground": "#050505",
 	"lightBackground": "#FFFFFF",
 	"neonPink": "rgb(214, 0, 255)",
-	"neonBlue": "rgb(0, 184, 255)",
-	"muted": "#f0e6f6",
-	"primary": "transparent",
-	"secondary": "#ff4081"
+	"neonBlue": "rgb(0, 184, 255)"
 }

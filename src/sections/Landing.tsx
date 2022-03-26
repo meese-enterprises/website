@@ -4,7 +4,7 @@ import TextLoop from 'react-text-loop';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import ScrollIcon from '../components/ScrollIcon';
-import ScrambleLetters from "../scripts/ScrambleLetters";
+import ScrambleLetters from "../utils/scramble";
 //import Triangle from '../components/Triangle';
 import { useSiteQuery } from '../queries/useSiteQuery';
 import { SECTION } from '../utils/constants';
@@ -38,7 +38,7 @@ const LandingPage = () => {
 				className="scramble"
 				fontSize={[6, 7]}
 			>
-				MEESE
+				Meese
 			</Text>
 
 			<Text
@@ -47,7 +47,7 @@ const LandingPage = () => {
 				className="scramble"
 				fontSize={[6, 7]}
 			>
-				ENTERPRISES
+				Enterprises
 			</Text>
 
 			<Text

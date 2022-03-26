@@ -18,7 +18,7 @@ const Helmet = ({ theme }: Props) => {
 			<title>{title}</title>
 			<meta name="description" content={description} />
 			<link rel="shortcut icon" href={`https:${profile.favicon32.src}`} />
-			<meta name="theme-color" content={theme.colors.background} />
+			<meta name="theme-color" content={theme.colors.darkBackground} />
 			<meta name="image" content={`https:${profile.favicon32.src}`} />
 			<meta itemProp="name" content={title} />
 			<meta itemProp="description" content={description} />

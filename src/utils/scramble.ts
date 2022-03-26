@@ -1,3 +1,9 @@
+declare global {
+  interface Array<T> {
+    shuffle(): Array<T>;
+  }
+}
+
 /**
  * Rearranges the indices of an array and returns the new array.
  * @returns {Array}
@@ -24,14 +30,21 @@ const getRandomInt = (min = 0, max = 1) =>
  * Modified from https://codepen.io/blazicke/pen/dQjxMr
  */
 export default class ScrambleLetters {
+	selector: string;
+	isScrambling: boolean;
+	targets: HTMLElement[];
+	letters: string;
+	originalStrings: string[];
+	singleLetters: NodeListOf<Element>;
+	initialDelay: number;
+	durationInterval: () => number;
+	animationInterval: () => number;
+
 	constructor(selector = ".scramble") {
 		this.selector = selector;
 		this.isScrambling = false;
-		this.repeat = 0;
-		this.target = [];
 		this.letters = "*+-/@_$[%£!XO1&>";
 		this.originalStrings = [];
-		this.singleLetters = [];
 		this.initialDelay = getRandomInt(400, 750);
 		this.durationInterval = () => getRandomInt(250, 450);
 		this.animationInterval = () => getRandomInt(8500, 14500);
@@ -59,7 +72,6 @@ export default class ScrambleLetters {
 		setTimeout(() => {
 			this.isScrambling = false;
 			this.resetLetters();
-			clearTimeout(this);
 
 			// Repeat the scramble animation after the animation interval
 			setTimeout(() => {
@@ -77,10 +89,7 @@ export default class ScrambleLetters {
 			letter.classList.add("is-changing");
 			letter.style.animationDuration = Math.random().toFixed(2) + "s";
 
-			const newChar = this.letters.substr(
-				Math.random() * this.letters.length,
-				1
-			);
+			const newChar = this.letters.charAt(Math.random() * this.letters.length);
 			letter.textContent = newChar;
 			letter.setAttribute("data-txt", newChar);
 		}
@@ -114,7 +123,7 @@ export default class ScrambleLetters {
 
 	changeLetters() {
 		if (this.isScrambling) {
-			this.singleLetters.forEach((el, index) => {
+			this.singleLetters.forEach((el) => {
 				this.changeLetter(el);
 			});
 		}
@@ -133,7 +142,7 @@ export default class ScrambleLetters {
 		randomArray.forEach((el, index) => {
 			setTimeout(() => {
 				this.resetLetter(this.singleLetters[el]);
-			}, index * 20 * (Math.random() * 5)).toFixed(2);
+			}, index * 20 * (Math.random() * 5));
 		});
 	}
 }
