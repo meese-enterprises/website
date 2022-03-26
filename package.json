@@ -5,22 +5,53 @@
 	"main": "index.js",
 	"license": "0BSD",
 	"scripts": {
-		"website": "env-cmd --silent yarn workspace website",
-		"theme": "env-cmd --silent yarn workspace gatsby-theme-neon",
-		"clean": "yarn website clean",
-		"start": "yarn website start",
-		"build": "yarn website build",
-		"serve": "yarn website serve",
+		"clean": "env-cmd --silent gatsby clean",
+		"start": "env-cmd --silent gatsby develop",
+		"build": "env-cmd --silent gatsby build",
+		"serve": "env-cmd --silent gatsby serve -p 5000",
+		"setup": "node ./bin/setup.mjs",
 		"test:ci": "yarn build && start-server-and-test serve 5000",
-		"check-types": "yarn theme check-types",
-		"release": "yarn theme release"
+		"check-types": "tsc -p . --noEmit",
+		"release": "npx semantic-release"
 	},
-	"workspaces": [
-		"gatsby-theme-neon",
-		"website"
-	],
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.36",
+		"@fortawesome/free-brands-svg-icons": "^5.15.4",
+		"@fortawesome/free-solid-svg-icons": "^5.15.4",
+		"@fortawesome/react-fontawesome": "^0.1.15",
+		"@rebass/preset": "^4.0.5",
+		"@tippy.js/react": "^3.1.1",
+		"assert": "^2.0.0",
+		"babel-plugin-styled-components": "^2.0.6",
+		"gatsby-plugin-image": "^2.10.0",
+		"gatsby-plugin-manifest": "^4.10.1",
+		"gatsby-plugin-react-helmet": "^5.10.0",
+		"gatsby-plugin-sharp": "^4.10.1",
+		"gatsby-plugin-styled-components": "^5.10.0",
+		"gatsby-plugin-typescript": "^4.10.0",
+		"gatsby-source-contentful": "^7.8.1",
+		"gatsby-source-medium": "^4.10.0",
+		"gatsby-transformer-remark": "^5.10.1",
+		"react-awesome-reveal": "^3.8.1",
+		"react-headroom": "^3.2.0",
+		"react-helmet": "^6.1.0",
+		"react-markdown": "^7.0.0",
+		"react-text-loop": "^2.3.0",
+		"rebass": "^4.0.7",
+		"styled-components": "^5.3.3",
+		"gatsby": "^4.10.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
 	"devDependencies": {
+		"chalk": "^5.0.1",
+		"contentful-import": "^8.2.28",
 		"env-cmd": "^10.1.0",
-		"start-server-and-test": "^1.14.0"
+		"inquirer": "^8.2.1",
+		"start-server-and-test": "^1.14.0",
+		"@types/react-headroom": "^2.2.2",
+		"@types/react-helmet": "^6.1.2",
+		"@types/rebass": "^4.0.9",
+		"typescript": "^4.6.2"
 	}
 }
