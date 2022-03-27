@@ -4,8 +4,10 @@
 :root {
 	--pink: rgba(214, 0, 255, 0.6);
 	--blue: rgba(0, 184, 255, 0.6);
-	--background: #050505;
-	--main-text: #ffffff;
+	--dark-background: #050505;
+	--light-background: #FFFFFF;
+	--light-text: #FFFFFF;
+	--dark-text: #020101;
 }
 
 ::selection {
@@ -13,6 +15,6 @@
 }
 
 body {
-	background-color: var(--background);
-	color: var(--main-text);
+	background-color: var(--light-background);
+	color: var(--dark-text);
 }

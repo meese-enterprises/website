@@ -57,7 +57,7 @@ const ScrollAnimation = keyframes`
 
 const Mouse = styled.rect`
 	transition: stroke 0.4s;
-	stroke: ${({ theme }) => theme.colors.neonPink};
+	stroke: ${({ theme }) => theme.colors.primaryAccent};
 	stroke-width: 3;
 `;
 
@@ -69,7 +69,7 @@ const Scroll = styled.circle`
 	animation-iteration-count: infinite;
 	transform-origin: 50% 20.5px;
 	will-change: transform;
-	fill: ${({ theme }) => theme.colors.neonPink};
+	fill: ${({ theme }) => theme.colors.primaryAccent};
 `;
 
 export default ScrollIcon;

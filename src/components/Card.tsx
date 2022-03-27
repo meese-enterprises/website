@@ -25,7 +25,7 @@ export const Card = styled(CardRebass).attrs({
 	boxShadow: 0,
 })`
 	position: relative;
-	background-color: ${({ theme }) => theme.colors.lightBackground};
+	background-color: ${({ theme }) => theme.colors.lightPrimary};
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 	transition: all 0.25s;
 	top: 0;

@@ -29,8 +29,8 @@ const GlobalStyle = createGlobalStyle`
 		width: 100vw;
 		overflow-x: hidden;
 		font-family: ${(props) => props.theme.fonts.body};
-		background: ${(props) => props.theme.colors.darkBackground};
-		color: ${(props) => props.theme.colors.lightText};
+		background: ${(props) => props.theme.colors.lightPrimary};
+		color: ${(props) => props.theme.colors.darkPrimary};
 	}
 `;
 

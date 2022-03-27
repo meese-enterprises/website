@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'rebass/styled-components';
-import Tippy from '@tippy.js/react';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SocialLink as SocialLinkType } from '../types';
-import { getIconDefinition } from '../utils/icons';
+import React from "react";
+import { Link } from "rebass/styled-components";
+import Tippy from "@tippy.js/react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SocialLink as SocialLinkType } from "../types";
+import { getIconDefinition } from "../utils/icons";
 
 type Props = SocialLinkType & {
 	invert?: boolean;
@@ -12,9 +12,7 @@ type Props = SocialLinkType & {
 
 const SocialLink = ({ icon, name, url, invert }: Props) => {
 	const iconDefinition = getIconDefinition(icon);
-	if (!iconDefinition) {
-		return null;
-	}
+	if (!iconDefinition) return null;
 
 	return (
 		<Tippy
@@ -39,7 +37,7 @@ const SocialLink = ({ icon, name, url, invert }: Props) => {
 const IconLink = styled(Link)<{ invert?: boolean }>`
 	transition: opacity 0.4s;
 	color: ${({ theme, invert }) =>
-		invert ? theme.colors.lightBackground : theme.colors.darkBackground};
+		invert ? theme.colors.darkPrimary : theme.colors.lightPrimary};
 	text-decoration: none;
 
 	&:hover {

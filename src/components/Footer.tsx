@@ -1,26 +1,27 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Text, Box, Flex } from 'rebass/styled-components';
-import { Fade } from 'react-awesome-reveal';
-import SocialLink from './SocialLink';
-import Link from './Link';
-import { useSiteQuery } from '../queries/useSiteQuery';
-import { CONTENTFUL_URL, GATSBY_URL, NETLIFY_URL } from '../utils/constants';
+import React from "react";
+import styled from "styled-components";
+import { Text, Box, Flex } from "rebass/styled-components";
+import { Fade } from "react-awesome-reveal";
+import SocialLink from "./SocialLink";
+import Link from "./Link";
+import { useSiteQuery } from "../queries/useSiteQuery";
+import { CONTENTFUL_URL, GATSBY_URL, NETLIFY_URL } from "../utils/constants";
 
 const Footer = () => {
-	const { name, socialLinks } = useSiteQuery();
+	const { companyName, socialLinks } = useSiteQuery();
 
 	return (
 		<Box p={[2, 3]} backgroundColor="primary" id="footer" as="footer">
 			<FooterContainer>
 				<Fade direction="left" triggerOnce>
-					<Text fontSize={[2, 3]} color="lightText">
-						<span>{`${name} - Powered by `}</span>
+					{/* TODO: Decide what I want to be displayed here instead */}
+					<Text fontSize={[2, 3]} color="darkPrimary">
+						<span>{`© ${companyName} - Powered by `}</span>
 						<Link href={GATSBY_URL}>Gatsby</Link>
 						<span>, </span>
 						<Link href={CONTENTFUL_URL}>Contentful</Link>
 						<span> and </span>
-						<Link href={NETLIFY_URL}>Netlify</Link>{' '}
+						<Link href={NETLIFY_URL}>Netlify</Link>{" "}
 						<span role="img" aria-label="heart">
 							❤️
 						</span>

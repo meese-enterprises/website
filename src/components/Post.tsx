@@ -11,14 +11,14 @@ type PostProps = MediumPostType;
 
 export const Post = ({ title, text, cover, url, date, time }: PostProps) => (
 	<PostContainer url={url} title={title}>
-		<EllipsisHeading m={3} color="darkText">
+		<EllipsisHeading m={3} color="darkPrimary">
 			{title}
 		</EllipsisHeading>
 		{cover && <CoverImage src={cover} height="200px" alt={title} />}
-		<Text m={3} color="darkText">
+		<Text m={3} color="darkPrimary">
 			{text}
 		</Text>
-		<ImageLabel bg="primary" color="lightBackground" position="bottom-right" round>
+		<ImageLabel bg="primary" color="lightPrimary" position="bottom-right" round>
 			{`${date} - ${Math.ceil(time)} min`}
 		</ImageLabel>
 	</PostContainer>
@@ -48,7 +48,7 @@ export const MorePosts = ({ author, number }: MorePostsProps) => (
 				</EllipsisHeading>
 				<Heading lineHeight={1.5}>
 					It seems that
-					<Text color="secondary">{author.name}</Text>
+					<Text color="darkSecondary">{author.name}</Text>
 					{`has published ${number} more posts!`}
 				</Heading>
 			</Box>

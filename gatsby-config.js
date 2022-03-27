@@ -18,11 +18,12 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
+				// TODO: Get this from Contentful
 				name: "Meese Enterprises",
 				short_name: "Meese",
 				start_url: "/",
-				background_color: colors.darkBackground,
-				theme_color: colors.neonPink,
+				background_color: colors.darkPrimary,
+				theme_color: colors.primaryAccent,
 				display: "minimal-ui",
 				icon: "logo.png",
 			},

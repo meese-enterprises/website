@@ -1,16 +1,16 @@
-import React from 'react';
-import { Box, Image, Flex } from 'rebass/styled-components';
-import styled from 'styled-components';
-import ReactMarkdown from 'react-markdown';
-import { Fade } from 'react-awesome-reveal';
-import Section from '../components/Section';
-import Triangle from '../components/Triangle';
-import components from '../components/MarkdownComponents';
-import { useAboutMeQuery } from '../queries/useAboutMeQuery';
-import { SECTION } from '../utils/constants';
+import React from "react";
+import { Box, Image, Flex } from "rebass/styled-components";
+import styled from "styled-components";
+import ReactMarkdown from "react-markdown";
+import { Fade } from "react-awesome-reveal";
+import Section from "../components/Section";
+import Triangle from "../components/Triangle";
+import components from "../components/MarkdownComponents";
+import { useAboutMeQuery } from "../queries/useAboutMeQuery";
+import { SECTION } from "../utils/constants";
 
 const About = () => {
-	const { markdown, profile } = useAboutMeQuery();
+	const { markdown, logo } = useAboutMeQuery();
 
 	return (
 		<Section.Container id={SECTION.about} Background={Background}>
@@ -24,10 +24,10 @@ const About = () => {
 
 				<Box
 					width={[1, 1, 2 / 6]}
-					style={{ maxWidth: '300px', margin: 'auto' }}
+					style={{ maxWidth: "300px", margin: "auto" }}
 				>
 					<Fade direction="right" triggerOnce>
-						<ProfilePicture mt={[4, 4, 0]} ml={[0, 0, 1]} {...profile} />
+						<ProfilePicture mt={[4, 4, 0]} ml={[0, 0, 1]} {...logo} />
 					</Fade>
 				</Box>
 			</Flex>
@@ -46,27 +46,25 @@ const ProfilePicture = styled(Image)`
 
 const Background = () => (
 	<>
-		{/*
 		<Triangle
-			color="secondary"
-			height={['50vh', '20vh']}
-			width={['50vw', '50vw']}
-			position="bottom-left"
-		/>
-
-		<Triangle
-			color="primary"
-			height={['20vh', '40vh']}
-			width={['75vw', '70vw']}
+			color="secondaryAccent"
+			height={["20vh", "40vh"]}
+			width={["75vw", "70vw"]}
 			position="top-right"
 		/>
 
 		<Triangle
-			color="muted"
-			height={['25vh', '20vh']}
-			width={['100vw', '100vw']}
+			color="darkPrimary"
+			height={["25vh", "20vh"]}
+			width={["100vw", "100vw"]}
 		/>
-		*/}
+
+		<Triangle
+			color="lightSecondary"
+			height={["50vh", "20vh"]}
+			width={["50vw", "50vw"]}
+			position="bottom-left"
+		/>
 	</>
 );
 

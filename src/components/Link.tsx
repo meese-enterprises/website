@@ -14,7 +14,7 @@ const Link = styled.a<Props>`
 	color: inherit;
 	font-weight: 600;
 	${({ selected, theme }) =>
-		selected && `border-bottom:	5px solid ${theme.colors.neonPink}`};
+		selected && `border-bottom:	5px solid ${theme.colors.primaryAccent}`};
 	transition: 0.4s;
 	cursor: ${({ onClick, href }) => (onClick || href ? 'pointer' : 'default')};
 
@@ -24,7 +24,7 @@ const Link = styled.a<Props>`
 		right: 0;
 		width: 0;
 		bottom: -5px;
-		background: ${({ theme }) => theme.colors.neonBlue};
+		background: ${({ theme }) => theme.colors.secondaryAccent};
 		height: 5px;
 		transition-property: width;
 		transition-duration: 0.3s;

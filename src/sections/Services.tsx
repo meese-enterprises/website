@@ -11,8 +11,8 @@ const Projects = () => {
 	const projects = useProjectsQuery();
 
 	return (
-		<Section.Container id={SECTION.projects} Background={Background}>
-			<Section.Header name={SECTION.projects} icon="💻" label="notebook" />
+		<Section.Container id={SECTION.services} Background={Background}>
+			<Section.Header name={SECTION.services} icon="💻" label="notebook" />
 
 			<CardContainer minWidth="350px">
 				<Fade direction="down" cascade damping={0.5} triggerOnce>
@@ -28,22 +28,29 @@ const Projects = () => {
 const Background = () => (
 	<>
 		<Triangle
-			color="muted"
-			height={["15vh", "10vh"]}
+			color="lightSecondary"
+			height={["80vh", "80vh"]}
 			width={["100vw", "100vw"]}
-			position="top-left"
+			position="top-right"
 		/>
 
 		<Triangle
-			color="lightSecondary"
-			height={["50vh", "40vh"]}
-			width={["70vw", "40vw"]}
-			position="bottom-left"
+			color="lightPrimary"
+			height={["50vh", "20vh"]}
+			width={["50vw", "50vw"]}
+			position="top-right"
 		/>
 
 		<Triangle
 			color="secondaryAccent"
-			height={["40vh", "15vh"]}
+			height={["25vh", "40vh"]}
+			width={["75vw", "60vw"]}
+			position="bottom-right"
+		/>
+
+		<Triangle
+			color="muted"
+			height={["25vh", "20vh"]}
 			width={["100vw", "100vw"]}
 			position="bottom-right"
 		/>

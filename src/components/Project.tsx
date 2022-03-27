@@ -1,11 +1,11 @@
-import React from 'react';
-import SocialLink from '../components/SocialLink';
-import ImageLabel from './ImageLabel';
-import Hide from '../components/Hide';
-import { Box, Flex, Image, Text } from 'rebass/styled-components';
-import styled from 'styled-components';
-import { Project as ProjectType } from '../types';
-import { Card } from './Card';
+import React from "react";
+import SocialLink from "../components/SocialLink";
+import ImageLabel from "./ImageLabel";
+import Hide from "../components/Hide";
+import { Box, Flex, Image, Text } from "rebass/styled-components";
+import styled from "styled-components";
+import { Project as ProjectType } from "../types";
+import { Card } from "./Card";
 
 type Props = ProjectType;
 
@@ -22,11 +22,11 @@ const Project = ({
 		<Flex style={{ height: CARD_HEIGHT }}>
 			<TextContainer>
 				<span>
-					<Title my={2} pb={1} color="darkText">
+					<Title my={2} pb={1} color="darkPrimary">
 						{name}
 					</Title>
 				</span>
-				<Text width={[1]} style={{ overflow: 'auto' }} color="darkText">
+				<Text width={[1]} style={{ overflow: "auto" }} color="darkPrimary">
 					{description}
 				</Text>
 			</TextContainer>
@@ -37,7 +37,7 @@ const Project = ({
 					<Flex
 						m={1}
 						style={{
-							float: 'right',
+							float: "right",
 						}}
 					>
 						<Box mx={1} fontSize={4}>
@@ -48,15 +48,15 @@ const Project = ({
 						</Box>
 					</Flex>
 					<ImageLabel
-						bg="neonPink"
-						color="lightBackground"
+						bg="primaryAccent"
+						color="darkPrimary"
 						position="bottom-right"
 						round
 					>
 						{type}
 					</ImageLabel>
 					<Hide query="md">
-						<ImageLabel bg="muted" color="darkText">
+						<ImageLabel bg="muted" color="lightText">
 							{publishedDate}
 						</ImageLabel>
 					</Hide>
@@ -66,16 +66,16 @@ const Project = ({
 	</Card>
 );
 
-const CARD_HEIGHT = '200px';
+const CARD_HEIGHT = "200px";
 
-const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
+const MEDIA_QUERY_SMALL = "@media (max-width: 400px)";
 
 const Title = styled(Text)`
 	font-size: 14px;
 	font-weight: 600;
 	text-transform: uppercase;
 	display: table;
-	border-bottom: ${({ theme }) => theme.colors.neonPink} 5px solid;
+	border-bottom: ${({ theme }) => theme.colors.primaryAccent} 5px solid;
 `;
 
 const TextContainer = styled.div`

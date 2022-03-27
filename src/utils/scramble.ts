@@ -35,7 +35,7 @@ export default class ScrambleLetters {
 	targets: HTMLElement[];
 	letters: string;
 	originalStrings: string[];
-	singleLetters: NodeListOf<Element>;
+	singleLetters!: NodeListOf<HTMLElement>;
 	initialDelay: number;
 	durationInterval: () => number;
 	animationInterval: () => number;
@@ -43,6 +43,7 @@ export default class ScrambleLetters {
 	constructor(selector = ".scramble") {
 		this.selector = selector;
 		this.isScrambling = false;
+		this.targets = [];
 		this.letters = "*+-/@_$[%£!XO1&>";
 		this.originalStrings = [];
 		this.initialDelay = getRandomInt(400, 750);
@@ -80,11 +81,11 @@ export default class ScrambleLetters {
 		}, this.durationInterval());
 	}
 
-	checkLength(selector) {
+	checkLength(selector: string) {
 		return Array.from(document.querySelectorAll(selector)).length > 0;
 	}
 
-	changeLetter(letter) {
+	changeLetter(letter: HTMLElement) {
 		if (letter.textContent != " ") {
 			letter.classList.add("is-changing");
 			letter.style.animationDuration = Math.random().toFixed(2) + "s";
@@ -95,11 +96,11 @@ export default class ScrambleLetters {
 		}
 	}
 
-	resetLetter(letter) {
+	resetLetter(letter: HTMLElement) {
 		const originalValue = letter.getAttribute("data-original");
 		letter.classList.remove("is-changing");
 		letter.textContent = originalValue;
-		letter.setAttribute("data-txt", originalValue);
+		letter.setAttribute("data-txt", originalValue!);
 	}
 
 	divideLetters() {
@@ -107,12 +108,12 @@ export default class ScrambleLetters {
 			const text = element.textContent;
 			let textDivided = "";
 
-			this.originalStrings[index] = text;
+			this.originalStrings[index] = text!;
 
-			for (let i = 0; i < text.length; i++) {
-				textDivided += `<span class="scrambling scramble-${index}-span-${i}" data-txt="${text.charAt(
+			for (let i = 0; i < text!.length; i++) {
+				textDivided += `<span class="scrambling scramble-${index}-span-${i}" data-txt="${text!.charAt(
 					i
-				)}" data-original="${text.charAt(i)}">${text.charAt(i)}</span>`;
+				)}" data-original="${text!.charAt(i)}">${text!.charAt(i)}</span>`;
 			}
 
 			element.innerHTML = textDivided;

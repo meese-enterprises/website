@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Project } from "../types";
 
 export type QueryResponse = {
-	contentfulAbout: {
+	contentfulCompanyInformation: {
 		projects: {
 			id: string;
 			name: string;
@@ -22,9 +22,9 @@ export type QueryResponse = {
 };
 
 export const useProjectsQuery = (): Project[] => {
-	const { contentfulAbout } = useStaticQuery<QueryResponse>(graphql`
+	const { contentfulCompanyInformation } = useStaticQuery<QueryResponse>(graphql`
 		query ProjectsQuery {
-			contentfulAbout {
+			contentfulCompanyInformation {
 				projects {
 					id
 					name
@@ -44,7 +44,7 @@ export const useProjectsQuery = (): Project[] => {
 		}
 	`);
 
-	return contentfulAbout.projects.map(({ logo, ...rest }) => ({
+	return contentfulCompanyInformation.projects.map(({ logo, ...rest }) => ({
 		...rest,
 		logo: {
 			alt: logo.title,

@@ -2,9 +2,9 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Landing, SocialLink } from "../types";
 
 type QueryResponse = {
-	contentfulAbout: {
-		name: string;
-		roles: string[];
+	contentfulCompanyInformation: {
+		companyName: string;
+		//roles: string[];
 		socialLinks: SocialLink[];
 	};
 	site: {
@@ -15,11 +15,10 @@ type QueryResponse = {
 };
 
 export const useSiteQuery = (): Landing & { deterministic: boolean } => {
-	const { contentfulAbout, site } = useStaticQuery<QueryResponse>(graphql`
+	const { contentfulCompanyInformation, site } = useStaticQuery<QueryResponse>(graphql`
 		query SiteQuery {
-			contentfulAbout {
-				name
-				roles
+			contentfulCompanyInformation {
+				companyName
 				socialLinks {
 					url
 					name
@@ -34,5 +33,5 @@ export const useSiteQuery = (): Landing & { deterministic: boolean } => {
 		}
 	`);
 
-	return { ...contentfulAbout, ...site.siteMetadata };
+	return { ...contentfulCompanyInformation, ...site.siteMetadata };
 };

@@ -1,11 +1,11 @@
-/*
- * TODO: Transition all of these fonts to minified versions
- * and a CDN in case the client has some cached.
- */
 @font-face {
 	font-family: "Noto";
 	src: url("../../fonts/Noto.otf") format("opentype");
 }
+/*@font-face {
+	font-family: "Noto Minimal";
+	src: url("../../fonts/Noto.min.woff") format("woff");
+}*/
 @font-face {
 	font-family: "Hermes";
 	src: url("../../fonts/Hermes.otf") format("opentype");
@@ -19,11 +19,10 @@ nav {
 	position: fixed;
 	width: 100%;
 	height: 50px;
-	background-color: var(--background);
+	background-color: var(--dark-background);
 	z-index: 1;
 	user-select: none;
 }
-
 #navLogo {
 	font-family: "Hermes";
 	font-size: 50px;
@@ -33,12 +32,15 @@ nav {
 	text-shadow: -4px -4px var(--pink), 4px 4px var(--blue);
 }
 
+#home {
+	background-color: var(--dark-background);
+}
+
 #neonSplash {
 	align-items: center;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -63,24 +65,25 @@ nav {
 #companyName {
 	font-family: "Bios Regular";
 	font-size: 90px;
+	height: 100px;
 	color: transparent;
 	text-shadow: -3px -3px 1px var(--pink), 3px 3px 1px var(--blue);
 }
 #companyType {
 	font-family: "Bios Regular";
 	font-size: 30px;
+	height: 35px;
 	letter-spacing: 0.5ch;
 	color: transparent;
-
 	text-shadow: -1px -1px var(--pink), 1px 1px var(--blue);
 }
 
 #tagline {
 	font-family: "Lucida Console";
 	font-size: 24px;
-	color: white;
+	color: var(--light-text);
 	letter-spacing: -1px;
-	text-shadow: 0 0 3px #ffffff;
+	text-shadow: 0 0 3px var(--light-text);
 	margin-top: 35px;
 }
 

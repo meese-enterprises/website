@@ -23,9 +23,10 @@ export type Project = {
 	logo: Image;
 };
 
+// TODO: Rename
 export type AboutMe = {
 	markdown: string;
-	profile: Image;
+	logo: Image;
 };
 
 export type SocialLink = {
@@ -50,7 +51,6 @@ export type MediumAuthor = {
 };
 
 export type Landing = {
-	name: string;
-	roles: string[];
+	companyName: string;
 	socialLinks: SocialLink[];
 };
