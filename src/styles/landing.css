@@ -67,7 +67,8 @@ nav {
 	font-size: 90px;
 	height: 100px;
 	color: transparent;
-	text-shadow: -3px -3px 1px var(--primaryColor), 3px 3px 1px var(--secondaryColor);
+	text-shadow: -3px -3px 1px var(--primaryColor),
+		3px 3px 1px var(--secondaryColor);
 }
 #companyType {
 	font-family: "Bios Regular";
