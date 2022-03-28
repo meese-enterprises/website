@@ -41,15 +41,15 @@ const Project = ({
 						}}
 					>
 						<Box mx={1} fontSize={4}>
-							<SocialLink name="Repository" icon="github" url={repository} />
+							<SocialLink name="Repository" icon="github" url={repository} invert />
 						</Box>
 						<Box mx={1} fontSize={4}>
-							<SocialLink name="Homepage" icon="globe" url={homepage} />
+							<SocialLink name="Homepage" icon="globe" url={homepage} invert />
 						</Box>
 					</Flex>
 					<ImageLabel
 						bg="primaryAccent"
-						color="darkPrimary"
+						color="lightPrimary"
 						position="bottom-right"
 						round
 					>

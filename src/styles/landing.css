@@ -29,7 +29,7 @@ nav {
 	text-decoration: none;
 	color: #ffffff;
 	margin-left: 10px;
-	text-shadow: -4px -4px var(--pink), 4px 4px var(--blue);
+	text-shadow: -4px -4px var(--primaryColor), 4px 4px var(--secondaryColor);
 }
 
 #home {
@@ -59,7 +59,7 @@ nav {
 }
 .chineseShadow {
 	color: transparent;
-	text-shadow: -1px -1px var(--pink), 1px 1px var(--blue);
+	text-shadow: -1px -1px var(--primaryColor), 1px 1px var(--secondaryColor);
 }
 
 #companyName {
@@ -67,7 +67,7 @@ nav {
 	font-size: 90px;
 	height: 100px;
 	color: transparent;
-	text-shadow: -3px -3px 1px var(--pink), 3px 3px 1px var(--blue);
+	text-shadow: -3px -3px 1px var(--primaryColor), 3px 3px 1px var(--secondaryColor);
 }
 #companyType {
 	font-family: "Bios Regular";
@@ -75,7 +75,7 @@ nav {
 	height: 35px;
 	letter-spacing: 0.5ch;
 	color: transparent;
-	text-shadow: -1px -1px var(--pink), 1px 1px var(--blue);
+	text-shadow: -1px -1px var(--primaryColor), 1px 1px var(--secondaryColor);
 }
 
 #tagline {

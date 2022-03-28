@@ -4,7 +4,6 @@ import { Footer, SocialLink } from "../types";
 type QueryResponse = {
 	contentfulCompanyInformation: {
 		companyName: string;
-		//roles: string[];
 		socialLinks: SocialLink[];
 	};
 	site: {

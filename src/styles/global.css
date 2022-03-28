@@ -2,12 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 :root {
-	--pink: rgba(214, 0, 255, 0.6);
-	--blue: rgba(0, 184, 255, 0.6);
+	--primaryColor: rgba(214, 0, 255, 0.6);
+	--secondaryColor: rgba(0, 184, 255, 0.6);
 	--dark-background: #050505;
 	--light-background: #ffffff;
-	--light-text: #ffffff;
 	--dark-text: #020101;
+	--light-text: #ffffff;
 }
 
 ::selection {
