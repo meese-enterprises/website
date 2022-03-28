@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { Landing, SocialLink } from "../types";
+import { Footer, SocialLink } from "../types";
 
 type QueryResponse = {
 	contentfulCompanyInformation: {
@@ -14,7 +14,7 @@ type QueryResponse = {
 	};
 };
 
-export const useSiteQuery = (): Landing & { deterministic: boolean } => {
+export const useSiteQuery = (): Footer & { deterministic: boolean } => {
 	const { contentfulCompanyInformation, site } =
 		useStaticQuery<QueryResponse>(graphql`
 			query SiteQuery {

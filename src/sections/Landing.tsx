@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
-import { Heading, Flex, Box, Text } from "rebass/styled-components";
-import TextLoop from "react-text-loop";
+import { Text } from "rebass/styled-components";
 import Section from "../components/Section";
-import SocialLink from "../components/SocialLink";
 import ScrollIcon from "../components/ScrollIcon";
 import ScrambleLetters from "../utils/scramble";
-import { useSiteQuery } from "../queries/useSiteQuery";
 import { SECTION } from "../utils/constants";
 import { getSectionHref } from "../utils/helpers";
-
-const centerHorizontally = { marginRight: "auto", marginLeft: "auto" };
+import { useLandingPageQuery } from "../queries/useLandingPageQuery";
 
 const LandingPage = () => {
-	// TODO: Move my Chinese stuff here, as well as company name/type
-	const { companyName, socialLinks, deterministic } = useSiteQuery();
+	const {
+		chineseCompanyName,
+		companyName,
+		companyType,
+		chineseTagline,
+		tagline
+	} = useLandingPageQuery();
 
 	// Runs after the render, so the DOM elements are available
 	useEffect(() => {
@@ -28,7 +29,7 @@ const LandingPage = () => {
 				className="chineseShadow"
 				fontSize={[6, 7]}
 			>
-				米斯企业有限责任公司
+				{chineseCompanyName}
 			</Text>
 
 			<Text
@@ -37,7 +38,7 @@ const LandingPage = () => {
 				className="scramble"
 				fontSize={[6, 7]}
 			>
-				Meese
+				{companyName}
 			</Text>
 
 			<Text
@@ -46,7 +47,7 @@ const LandingPage = () => {
 				className="scramble"
 				fontSize={[6, 7]}
 			>
-				Enterprises
+				{companyType}
 			</Text>
 
 			<Text
@@ -55,7 +56,7 @@ const LandingPage = () => {
 				className="chineseShadow"
 				fontSize={[6, 7]}
 			>
-				只說一句話
+				{chineseTagline}
 			</Text>
 
 			<Text
@@ -64,37 +65,8 @@ const LandingPage = () => {
 				fontSize={[6, 7]}
 				mb={[3, 4, 5]}
 			>
-				Just say the word.
+				{tagline}
 			</Text>
-
-			{/*}
-			<Heading
-				as="h2"
-				color="lightPrimary"
-				fontSize={[5, 6]}
-				mb={[3, 5]}
-				textAlign="center"
-				style={centerHorizontally}
-			>
-				<TextLoop interval={5000}>
-					{roles
-						.sort(() => (deterministic ? 1 : Math.random() - 0.5))
-						.map((text) => (
-							<Text width={[300, 500]} key={text}>
-								{text}
-							</Text>
-						))}
-				</TextLoop>
-			</Heading>
-
-			<Flex alignItems="center" justifyContent="center" flexWrap="wrap">
-				{socialLinks.map((sl) => (
-					<Box mx={3} fontSize={[5, 6, 6]} key={sl.name}>
-						<SocialLink {...sl} />
-					</Box>
-				))}
-			</Flex>
-			*/}
 
 			<ScrollIcon href={`#${getSectionHref(SECTION.about)}`} />
 		</Section.Container>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 type Props = {
 	selected?: boolean;
@@ -16,10 +16,10 @@ const Link = styled.a<Props>`
 	${({ selected, theme }) =>
 		selected && `border-bottom:	5px solid ${theme.colors.primaryAccent}`};
 	transition: 0.4s;
-	cursor: ${({ onClick, href }) => (onClick || href ? 'pointer' : 'default')};
+	cursor: ${({ onClick, href }) => (onClick || href ? "pointer" : "default")};
 
 	&:after {
-		content: '';
+		content: "";
 		position: absolute;
 		right: 0;
 		width: 0;

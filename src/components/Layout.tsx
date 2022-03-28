@@ -1,12 +1,12 @@
-import React, { ReactNode } from 'react';
-import { Theme } from '@rebass/preset';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { loadIcons } from '../utils/icons';
-import { theme } from '../theme';
-import Helmet from './Helmet';
-import 'tippy.js/dist/tippy.css';
+import React, { ReactNode } from "react";
+import { Theme } from "@rebass/preset";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { loadIcons } from "../utils/icons";
+import { theme } from "../theme";
+import Helmet from "./Helmet";
+import "tippy.js/dist/tippy.css";
 
-declare module 'styled-components' {
+declare module "styled-components" {
 	export interface DefaultTheme extends Theme {}
 }
 

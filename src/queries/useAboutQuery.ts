@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { AboutMe } from "../types";
+import { About } from "../types";
 
 export type QueryResponse = {
 	contentfulCompanyInformation: {
-		aboutMe: {
+		about: {
 			childMarkdownRemark: {
 				rawMarkdownBody: string;
 			};
@@ -17,13 +17,13 @@ export type QueryResponse = {
 	};
 };
 
-export const useAboutMeQuery = (): AboutMe => {
+export const useAboutQuery = (): About => {
 	const {
-		contentfulCompanyInformation: { aboutMe, logo },
+		contentfulCompanyInformation: { about, logo },
 	} = useStaticQuery<QueryResponse>(graphql`
-		query AboutMeQuery {
+		query AboutQuery {
 			contentfulCompanyInformation {
-				aboutMe {
+				about {
 					childMarkdownRemark {
 						rawMarkdownBody
 					}
@@ -39,7 +39,7 @@ export const useAboutMeQuery = (): AboutMe => {
 	`);
 
 	return {
-		markdown: aboutMe.childMarkdownRemark.rawMarkdownBody,
+		markdown: about.childMarkdownRemark.rawMarkdownBody,
 		logo: {
 			alt: logo.title,
 			src: logo.image.src,

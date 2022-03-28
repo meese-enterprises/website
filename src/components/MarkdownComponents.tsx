@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
-import { Text } from 'rebass';
-import { Components as MarkdownComponents } from 'react-markdown';
-import styled from 'styled-components';
+import React, { ReactNode } from "react";
+import { Text } from "rebass";
+import { Components as MarkdownComponents } from "react-markdown";
+import styled from "styled-components";
 
 const StyledLink = styled.a`
 	display: inline-block;
@@ -17,7 +17,7 @@ const StyledLink = styled.a`
 		bottom: 0px;
 		left: 50%;
 		transform: translateX(-50%);
-		content: '';
+		content: "";
 		width: 100%;
 		height: 3px;
 		background-color: ${({ theme }) => theme.colors.darkSecondary};
@@ -28,8 +28,8 @@ const StyledLink = styled.a`
 		color: ${({ theme }) => theme.colors.lightPrimary};
 
 		&::after {
-			height: 110%;
-			width: 110%;
+			height: 105%;
+			width: 105%;
 		}
 	}
 `;
@@ -67,7 +67,7 @@ type LinkProps = {
 };
 
 const MarkdownLink = ({ href, children }: LinkProps) => {
-	const isInnerLink = href?.startsWith('#');
+	const isInnerLink = href?.startsWith("#");
 
 	return isInnerLink ? (
 		<StyledLink href={href}>{children}</StyledLink>

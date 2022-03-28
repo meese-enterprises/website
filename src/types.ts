@@ -23,8 +23,7 @@ export type Project = {
 	logo: Image;
 };
 
-// TODO: Rename
-export type AboutMe = {
+export type About = {
 	markdown: string;
 	logo: Image;
 };
@@ -51,6 +50,14 @@ export type MediumAuthor = {
 };
 
 export type Landing = {
+	chineseCompanyName: string;
+	companyName: string;
+	companyType: string;
+	chineseTagline: string;
+	tagline: string;
+};
+
+export type Footer = {
 	companyName: string;
 	socialLinks: SocialLink[];
-};
+}

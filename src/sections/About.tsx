@@ -6,11 +6,11 @@ import { Fade } from "react-awesome-reveal";
 import Section from "../components/Section";
 import Triangle from "../components/Triangle";
 import components from "../components/MarkdownComponents";
-import { useAboutMeQuery } from "../queries/useAboutMeQuery";
+import { useAboutQuery } from "../queries/useAboutQuery";
 import { SECTION } from "../utils/constants";
 
 const About = () => {
-	const { markdown, logo } = useAboutMeQuery();
+	const { markdown, logo } = useAboutQuery();
 
 	return (
 		<Section.Container id={SECTION.about} Background={Background}>

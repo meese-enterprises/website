@@ -1,10 +1,10 @@
-import React, { ReactNode } from 'react';
-import styled from 'styled-components';
-import { Heading } from 'rebass/styled-components';
-import { Slide } from 'react-awesome-reveal';
-import Link from './Link';
-import { SECTION } from '../utils/constants';
-import { getSectionHref } from '../utils/helpers';
+import React, { ReactNode } from "react";
+import styled from "styled-components";
+import { Heading } from "rebass/styled-components";
+import { Slide } from "react-awesome-reveal";
+import Link from "./Link";
+import { SECTION } from "../utils/constants";
+import { getSectionHref } from "../utils/helpers";
 
 type ContainerProps = {
 	id?: SECTION;
@@ -17,7 +17,7 @@ const Container = ({
 	children,
 	Background = DefaultBackground,
 }: ContainerProps) => (
-	<section id={id && getSectionHref(id)} style={{ position: 'relative' }}>
+	<section id={id && getSectionHref(id)} style={{ position: "relative" }}>
 		<Background />
 		<SectionContainer>{children}</SectionContainer>
 	</section>
@@ -35,7 +35,7 @@ const Header = ({ name, icon, label }: HeaderProps) => (
 			<Link selected>
 				{name}
 				{icon && (
-					<span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
+					<span role="img" aria-label={label} style={{ marginLeft: "10px" }}>
 						{icon}
 					</span>
 				)}
