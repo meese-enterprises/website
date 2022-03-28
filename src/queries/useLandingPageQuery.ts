@@ -12,9 +12,7 @@ export type QueryResponse = {
 };
 
 export const useLandingPageQuery = (): Landing => {
-	const {
-		contentfulLandingPage,
-	} = useStaticQuery<QueryResponse>(graphql`
+	const { contentfulLandingPage } = useStaticQuery<QueryResponse>(graphql`
 		query LandingQuery {
 			contentfulLandingPage {
 				chineseCompanyName

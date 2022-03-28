@@ -21,4 +21,5 @@ Our dedicated design team provides the developers with a mock-up of the site, so
 Contentful is a powerful tool that allows us to create and manage content for our site. Any changes that we want to make to the content can be made through the Contentful CMS, allowing us to abstract these modifications from the code so the developers and content creators can work in tandem without having to wait on one another.
 
 ### GraphQL
+
 GraphQL allows our site to request only the data that it needs and only when it is needed, keeping information sent over the wire to a minimum and reducing the load on the user's bandwidth.

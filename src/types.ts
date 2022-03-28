@@ -60,4 +60,4 @@ export type Landing = {
 export type Footer = {
 	companyName: string;
 	socialLinks: SocialLink[];
-}
+};
