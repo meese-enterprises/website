@@ -2,7 +2,8 @@ const assert = require("assert");
 const gatsbySourceMedium = require("gatsby-source-medium/gatsby-node");
 const { createClient } = require("contentful");
 
-const getCompanyInformationEntry = (entry) => entry.sys.contentType.sys.id === "companyInformation";
+const getCompanyInformationEntry = (entry) =>
+	entry.sys.contentType.sys.id === "companyInformation";
 
 const LandingTemplate = require.resolve("./src/templates/Home.tsx");
 const NotFoundTemplate = require.resolve("./src/templates/NotFound.tsx");
@@ -13,7 +14,10 @@ exports.sourceNodes = async (gatsbyConfig) => {
 
 	const { items } = await client.getEntries();
 	const companyInformation = items.find(getCompanyInformationEntry);
-	assert(companyInformation, "Can't fetch `companyInformation` entry from Contentful");
+	assert(
+		companyInformation,
+		"Can't fetch `companyInformation` entry from Contentful"
+	);
 	const { mediumUser = "@medium" } = companyInformation.fields;
 
 	await gatsbySourceMedium.sourceNodes(gatsbyConfig, { username: mediumUser });

@@ -22,27 +22,28 @@ export type QueryResponse = {
 };
 
 export const useProjectsQuery = (): Project[] => {
-	const { contentfulCompanyInformation } = useStaticQuery<QueryResponse>(graphql`
-		query ProjectsQuery {
-			contentfulCompanyInformation {
-				projects {
-					id
-					name
-					description
-					homepage: projectUrl
-					repository: repositoryUrl
-					publishedDate(formatString: "YYYY")
-					type
-					logo {
-						title
-						image: resize(width: 200, quality: 100) {
-							src
+	const { contentfulCompanyInformation } =
+		useStaticQuery<QueryResponse>(graphql`
+			query ProjectsQuery {
+				contentfulCompanyInformation {
+					projects {
+						id
+						name
+						description
+						homepage: projectUrl
+						repository: repositoryUrl
+						publishedDate(formatString: "YYYY")
+						type
+						logo {
+							title
+							image: resize(width: 200, quality: 100) {
+								src
+							}
 						}
 					}
 				}
 			}
-		}
-	`);
+		`);
 
 	return contentfulCompanyInformation.projects.map(({ logo, ...rest }) => ({
 		...rest,
