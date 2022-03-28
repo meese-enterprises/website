@@ -11,11 +11,10 @@ const Footer = () => {
 	const { companyName, socialLinks } = useSiteQuery();
 
 	return (
-		<Box p={[2, 3]} backgroundColor="primary" id="footer" as="footer">
+		<Box p={[2, 3]} backgroundColor="secondaryAccent" id="footer" as="footer">
 			<FooterContainer>
 				<Fade direction="left" triggerOnce>
-					{/* TODO: Decide what I want to be displayed here instead */}
-					<Text fontSize={[2, 3]} color="darkPrimary">
+					<Text fontSize={[2, 3]} color="lightPrimary">
 						<span>{`© ${companyName} - Powered by `}</span>
 						<Link href={GATSBY_URL}>Gatsby</Link>
 						<span>, </span>
@@ -31,7 +30,7 @@ const Footer = () => {
 					<Fade direction="right" triggerOnce cascade damping={0.5}>
 						{socialLinks.map((sl) => (
 							<Box mx={[2, 3]} fontSize={[4, 5]} key={sl.name}>
-								<SocialLink {...sl} invert />
+								<SocialLink {...sl} />
 							</Box>
 						))}
 					</Fade>
