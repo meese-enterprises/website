@@ -16,11 +16,11 @@ const Footer = () => {
 				<Fade direction="left" triggerOnce>
 					<Text fontSize={[2, 3]} color="lightPrimary">
 						<span>{`© ${companyName} - Powered by `}</span>
-						<Link href={GATSBY_URL}>Gatsby</Link>
+						<Link href={GATSBY_URL} footer>Gatsby</Link>
 						<span>, </span>
-						<Link href={CONTENTFUL_URL}>Contentful</Link>
+						<Link href={CONTENTFUL_URL} footer>Contentful</Link>
 						<span> and </span>
-						<Link href={NETLIFY_URL}>Netlify</Link>{" "}
+						<Link href={NETLIFY_URL} footer>Netlify</Link>{" "}
 						<span role="img" aria-label="heart">
 							❤️
 						</span>

@@ -2,8 +2,8 @@
 	"darkPrimary": "#050505",
 	"lightPrimary": "#FFFFFF",
 	"darkSecondary": "#0A0A0A",
-	"lightSecondary": "#ff4081",
-	"primaryAccent": "rgb(214, 0, 255)",
+	"lightSecondary": "rgb(214, 0, 255, 0.6)",
+	"primaryAccent": "rgb(214, 0, 255, 0.6)",
 	"secondaryAccent": "rgb(0, 184, 255)",
 	"muted": "#f0e6f6"
 }
