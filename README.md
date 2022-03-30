@@ -1,5 +1,8 @@
 # meese.enterprises
 
+[![DeepSource](https://deepsource.io/gh/meese-enterprises/website.svg/?label=active+issues&show_trend=true&token=fIqMM9HkwVxe8orUxktXi7hd)](https://deepsource.io/gh/meese-enterprises/website/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/meese-enterprises/website.svg/?label=resolved+issues&show_trend=true&token=fIqMM9HkwVxe8orUxktXi7hd)](https://deepsource.io/gh/meese-enterprises/website/?ref=repository-badge)
+
 The code is based off of the _amazing_ [Gatsby template](https://github.com/EmaSuriano/gatsby-starter-mate) by [@EmaSuriano](https://github.com/EmaSuriano), but the unique look and feel is our own. Here at Meese Enterprises, we have a passion for creating beautiful, functional, and user-friendly websites. We are a small team of developers, designers, and content creators who are dedicated to creating the best possible user experience for our customers, so we wanted to emulate and demonstrate our passions via our landing page.
 
 <!-- TODO: Finish getting this working and implemented before uncommenting.

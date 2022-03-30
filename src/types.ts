@@ -13,11 +13,19 @@ export type Favicon = {
 	src: string;
 };
 
+export type Service = {
+	name: string;
+	description: string;
+	type: string;
+	icon: Image;
+};
+
 export type Project = {
 	name: string;
 	description: string;
-	homepage: string;
-	repository: string;
+	homepage?: string;
+	repository?: string;
+	caseStudy?: string;
 	type: string;
 	publishedDate: string;
 	logo: Image;
@@ -34,7 +42,16 @@ export type SocialLink = {
 	icon: IconName;
 };
 
-export type MediumAuthor = {
+export type CaseStudy = {
+	title: string;
+	text: string;
+	cover: string;
+	url: string;
+	date: string;
+	time: number;
+};
+
+export type Author = {
 	id: string;
 	name: string;
 	username: string;

@@ -10,6 +10,7 @@ import { SECTION } from "../utils/constants";
 const Projects = () => {
 	const projects = useProjectsQuery();
 
+	// TODO: Sort by date
 	return (
 		<Section.Container id={SECTION.projects} Background={Background}>
 			<Section.Header name={SECTION.projects} icon="💻" label="notebook" />

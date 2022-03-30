@@ -3,6 +3,7 @@ import styled from "styled-components";
 type Props = {
 	selected?: boolean;
 	href?: string;
+	footer?: boolean;
 	onClick?: () => void;
 };
 
@@ -24,7 +25,9 @@ const Link = styled.a<Props>`
 		right: 0;
 		width: 0;
 		bottom: -5px;
-		background: ${({ theme }) => theme.colors.secondaryAccent};
+		background: ${({ theme, footer }) => footer
+			? theme.colors.secondaryAccent
+			: theme.colors.darkPrimary};
 		height: 5px;
 		transition-property: width;
 		transition-duration: 0.3s;

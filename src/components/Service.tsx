@@ -1,24 +1,17 @@
 import React from "react";
-import SocialLink from "../components/SocialLink";
 import ImageLabel from "./ImageLabel";
-import Hide from "../components/Hide";
-import { Box, Flex, Image, Text } from "rebass/styled-components";
+import { Flex, Image, Text } from "rebass/styled-components";
 import styled from "styled-components";
-import { Project as ProjectType } from "../types";
+import { Service as ServiceType } from "../types";
 import { Card } from "./Card";
 
-type Props = ProjectType;
+type Props = ServiceType;
 
-// TODO: Summary content then click for description
-const Project = ({
+const Service = ({
 	name,
 	description,
-	homepage,
-	repository,
-	caseStudy,
 	type,
-	publishedDate,
-	logo,
+	icon,
 }: Props) => (
 	<Card p={0}>
 		<Flex style={{ height: CARD_HEIGHT }}>
@@ -34,30 +27,8 @@ const Project = ({
 			</TextContainer>
 
 			<ImageContainer>
-				<ProjectImage {...logo} />
+				<ProjectImage {...icon} />
 				<ProjectTag>
-					<Flex
-						m={1}
-						style={{
-							float: "right",
-						}}
-					>
-						{repository && (
-							<Box mx={1} fontSize={4}>
-								<SocialLink name="Repository" icon="github" url={repository} invert />
-							</Box>
-						)}
-						{homepage && (
-							<Box mx={1} fontSize={4}>
-								<SocialLink name="Homepage" icon="globe" url={homepage} invert />
-							</Box>
-						)}
-						{caseStudy && (
-							<Box mx={1} fontSize={4}>
-								<SocialLink name="Case Study" icon="medium" url={caseStudy} invert />
-							</Box>
-						)}
-					</Flex>
 					<ImageLabel
 						bg="primaryAccent"
 						color="lightPrimary"
@@ -66,11 +37,6 @@ const Project = ({
 					>
 						{type}
 					</ImageLabel>
-					<Hide query="md">
-						<ImageLabel bg="muted" color="lightText">
-							{publishedDate}
-						</ImageLabel>
-					</Hide>
 				</ProjectTag>
 			</ImageContainer>
 		</Flex>
@@ -136,4 +102,4 @@ const ProjectTag = styled.div`
 	}
 `;
 
-export default Project;
+export default Service;
