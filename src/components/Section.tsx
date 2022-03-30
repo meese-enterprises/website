@@ -27,11 +27,12 @@ type HeaderProps = {
 	name: string;
 	icon?: string;
 	label?: string;
+	styles?: string;
 };
 
-const Header = ({ name, icon, label }: HeaderProps) => (
+const Header = ({ name, icon, label, styles }: HeaderProps) => (
 	<Slide direction="left" triggerOnce>
-		<Heading color="darkPrimary" mb={4}>
+		<StyledHeading color="darkPrimary" mb={4} styles={styles}>
 			<Link selected>
 				{name}
 				{icon && (
@@ -40,9 +41,13 @@ const Header = ({ name, icon, label }: HeaderProps) => (
 					</span>
 				)}
 			</Link>
-		</Heading>
+		</StyledHeading>
 	</Slide>
 );
+
+const StyledHeading = styled(Heading)<{ styles?: string }>`
+	${({ styles }) => styles}
+`;
 
 const SectionContainer = styled.div`
 	min-height: 100vh;

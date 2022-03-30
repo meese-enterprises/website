@@ -12,9 +12,19 @@ import { SECTION } from "../utils/constants";
 const About = () => {
 	const { markdown, logo } = useAboutQuery();
 
+	/** Prevents the dark triangle from overlapping with the dark text. */
+	const customStyles = `
+	@media (max-width: 1400px) {
+		padding-top: 10vh;
+	}
+	@media (max-width: 1000px) {
+		padding-top: 20vh;
+	}
+	`;
+
 	return (
 		<Section.Container id={SECTION.about} Background={Background}>
-			<Section.Header name={SECTION.about} label="person" />
+			<Section.Header name={SECTION.about} styles={customStyles} />
 			<Flex justifyContent="center" alignItems="center" flexWrap="wrap">
 				<Box width={[1, 1, 4 / 6]} px={[1, 2, 4]} mt={2}>
 					<Fade direction="down" triggerOnce>
