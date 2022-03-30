@@ -19,35 +19,34 @@ export type QueryResponse = {
 				};
 			};
 		}[];
-	}
+	};
 };
 
 export const useServicesQuery = (): Service[] => {
 	const {
-		contentfulCompanyInformation: { services }
-	} =
-		useStaticQuery<QueryResponse>(graphql`
-			query ServicesQuery {
-				contentfulCompanyInformation {
-					services {
-						id
-						name
-						description {
-							childMarkdownRemark {
-								rawMarkdownBody
-							}
+		contentfulCompanyInformation: { services },
+	} = useStaticQuery<QueryResponse>(graphql`
+		query ServicesQuery {
+			contentfulCompanyInformation {
+				services {
+					id
+					name
+					description {
+						childMarkdownRemark {
+							rawMarkdownBody
 						}
-						type
-						icon {
-							title
-							image: resize(width: 200, quality: 100) {
-								src
-							}
+					}
+					type
+					icon {
+						title
+						image: resize(width: 200, quality: 100) {
+							src
 						}
 					}
 				}
 			}
-		`);
+		}
+	`);
 
 	return services.map(({ icon, description, ...rest }) => ({
 		...rest,
