@@ -16,7 +16,6 @@ export type Favicon = {
 export type Service = {
 	name: string;
 	description: string;
-	type: string;
 	icon: Image;
 };
 

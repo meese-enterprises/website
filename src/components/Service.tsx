@@ -1,5 +1,4 @@
 import React from "react";
-import ImageLabel from "./ImageLabel";
 import { Flex, Image, Text } from "rebass/styled-components";
 import styled from "styled-components";
 import { Service as ServiceType } from "../types";
@@ -10,36 +9,15 @@ type Props = ServiceType;
 const Service = ({
 	name,
 	description,
-	type,
 	icon,
 }: Props) => (
 	<Card p={0}>
-		<Flex style={{ height: CARD_HEIGHT }}>
-			<TextContainer>
-				<span>
-					<Title my={2} pb={1} color="darkPrimary">
-						{name}
-					</Title>
-				</span>
-				<Text width={[1]} style={{ overflow: "auto" }} color="darkPrimary">
-					{description}
-				</Text>
-			</TextContainer>
-
-			<ImageContainer>
-				<ProjectImage {...icon} />
-				<ProjectTag>
-					<ImageLabel
-						bg="primaryAccent"
-						color="lightPrimary"
-						position="bottom-right"
-						round
-					>
-						{type}
-					</ImageLabel>
-				</ProjectTag>
-			</ImageContainer>
-		</Flex>
+		<ImageContainer>
+			<ProjectImage {...icon} />
+			<Title my={2} pb={1} color="darkPrimary">
+				{name}
+			</Title>
+		</ImageContainer>
 	</Card>
 );
 
@@ -53,14 +31,8 @@ const Title = styled(Text)`
 	text-transform: uppercase;
 	display: table;
 	border-bottom: ${({ theme }) => theme.colors.primaryAccent} 5px solid;
-`;
-
-const TextContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-	width: 100%;
 	width: calc(100% - ${CARD_HEIGHT});
+	margin: 10px auto;
 
 	${MEDIA_QUERY_SMALL} {
 		width: calc(100% - (${CARD_HEIGHT} / 2));
@@ -77,9 +49,11 @@ const ImageContainer = styled.div`
 `;
 
 const ProjectImage = styled(Image)`
-	width: ${CARD_HEIGHT};
-	height: ${CARD_HEIGHT};
-	padding: 40px;
+	width: calc(${CARD_HEIGHT} - 50px);
+	height: calc(${CARD_HEIGHT} - 50px);
+	display: block;
+	padding: 20px;
+	margin: auto;
 	margin-top: 0px;
 
 	${MEDIA_QUERY_SMALL} {
@@ -87,18 +61,6 @@ const ProjectImage = styled(Image)`
 		width: calc(${CARD_HEIGHT} / 2);
 		margin-top: calc(${CARD_HEIGHT} / 4);
 		padding: 10px;
-	}
-`;
-
-const ProjectTag = styled.div`
-	position: relative;
-	height: ${CARD_HEIGHT};
-	top: calc(
-		-${CARD_HEIGHT} - 3.5px
-	); /*don't know why I have to add 3.5px here ... */
-
-	${MEDIA_QUERY_SMALL} {
-		top: calc(-${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
 	}
 `;
 
