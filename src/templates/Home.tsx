@@ -6,9 +6,11 @@ import About from "../sections/About";
 import Services from "../sections/Services";
 import Projects from "../sections/Projects";
 import Footer from "../components/Footer";
+const staticEffect = false;
 
 const Home = () => (
 	<Layout>
+		{staticEffect && <div className="static" />}
 		<Header />
 		<Landing />
 		<About />
