@@ -19,6 +19,7 @@ body {
 	color: var(--dark-text);
 }
 
+/** https://codepen.io/iceable/pen/yLBrZOd */
 .static {
 	position: fixed;
 	top: -50%;
@@ -27,6 +28,7 @@ body {
 	bottom: -50%;
 	width: 200%;
 	height: 200vh;
+	/* TODO: Try to come back and do this with lines, either with an image or with a transparent canvas */
 	background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
 	background-repeat: repeat;
 	animation: bg-animation .2s infinite;

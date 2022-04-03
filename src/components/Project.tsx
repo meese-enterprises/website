@@ -104,6 +104,7 @@ const TextContainer = styled.div`
 const ImageContainer = styled.div`
 	margin: auto;
 	width: ${CARD_HEIGHT};
+	height: ${CARD_HEIGHT};
 
 	${MEDIA_QUERY_SMALL} {
 		width: calc(${CARD_HEIGHT} / 2);

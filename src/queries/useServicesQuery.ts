@@ -36,7 +36,6 @@ export const useServicesQuery = (): Service[] => {
 							rawMarkdownBody
 						}
 					}
-					type
 					icon {
 						title
 						image: resize(width: 200, quality: 100) {

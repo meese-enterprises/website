@@ -1,8 +1,9 @@
 import React from "react";
-import { Flex, Image, Text } from "rebass/styled-components";
-import styled from "styled-components";
-import { Service as ServiceType } from "../types";
+import { Image, Text } from "rebass/styled-components";
 import { Card } from "./Card";
+import { Link } from "gatsby";
+import { Service as ServiceType } from "../types";
+import styled from "styled-components";
 
 type Props = ServiceType;
 
@@ -12,12 +13,20 @@ const Service = ({
 	icon,
 }: Props) => (
 	<Card p={0}>
-		<ImageContainer>
-			<ProjectImage {...icon} />
-			<Title my={2} pb={1} color="darkPrimary">
-				{name}
-			</Title>
-		</ImageContainer>
+		<Link
+			to="/serviceModal"
+			state={{
+				modal: true,
+				description,
+			}}
+		>
+			<ImageContainer>
+				<ProjectImage {...icon} />
+				<Title my={2} pb={1} color="darkPrimary">
+					{name}
+				</Title>
+			</ImageContainer>
+		</Link>
 	</Card>
 );
 

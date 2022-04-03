@@ -39,6 +39,7 @@
 		"react-headroom": "^3.2.0",
 		"react-helmet": "^6.1.0",
 		"react-markdown": "^7.0.0",
+		"react-modal": "^3.14.4",
 		"react-text-loop": "^2.3.0",
 		"rebass": "^4.0.7",
 		"styled-components": "^5.3.3"
@@ -46,6 +47,7 @@
 	"devDependencies": {
 		"@types/react-headroom": "^2.2.2",
 		"@types/react-helmet": "^6.1.2",
+		"@types/react-modal": "^3.13.1",
 		"@types/rebass": "^4.0.9",
 		"chalk": "^5.0.1",
 		"contentful-import": "^8.2.28",
