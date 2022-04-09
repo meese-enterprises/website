@@ -29,12 +29,13 @@ body {
 	width: 200%;
 	height: 200vh;
 	/* TODO: Try to come back and do this with lines, either with an image or with a transparent canvas */
-	background: transparent
-		url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+	background: transparent url("../vhs_noise.png") repeat 0 0;
 	background-repeat: repeat;
 	animation: bg-animation 0.2s infinite;
 	opacity: 0.9;
 	visibility: visible;
+	z-index: 999;
+	pointer-events: none;
 }
 
 @keyframes bg-animation {

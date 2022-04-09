@@ -26,3 +26,27 @@ Contentful is a powerful tool that allows us to create and manage content for ou
 ### GraphQL
 
 GraphQL allows our site to request only the data that it needs and only when it is needed, keeping information sent over the wire to a minimum and reducing the load on the user's bandwidth.
+
+<!-- IDEA:
+
+	Use `gatsby-source-rss-feed` to create a feed of the blog posts.
+
+	INSPIRATION: https://www.deltacloudsystems.com/
+	https://cyberpunkonline.net/
+	https://gramadosummit.com/
+
+	IDEAS:
+	- https://codepen.io/alvarotrigo/pen/eYEPgON
+	- https://codepen.io/alvarotrigo/pen/ZEJqLzY
+	- https://codepen.io/MarcoGuglielmelli/pen/ExGYae
+	- https://codepen.io/Rowno/pen/EVEgJb
+	- https://codepen.io/alexcu21/pen/RYxjme
+	- https://codepen.io/Yusifalomeri/pen/PabqGO
+	- https://codepen.io/codycurley/pen/bdqevE
+	- https://codepen.io/jcoulterdesign/pen/vqOyLr
+	- VHS filter over entire page with https://i.pinimg.com/originals/5f/74/28/5f7428eb2927783782d5a5d2df8bf986.png
+
+	TODO:
+	- Support Drupal and display badge: https://www.drupal.org/association/campaign/become-a-member-2021
+
+-->
