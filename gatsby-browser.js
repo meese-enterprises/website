@@ -7,12 +7,8 @@ import "./src/styles/modal.css";
 // @ts-ignores
 import wrapPageElement from "./src/utils/wrapPageElement";
 const onClientEntry = (_args) => {
-  Modal.setAppElement("#___gatsby");
-}
+	Modal.setAppElement("#___gatsby");
+};
 const shouldUpdateScroll = () => false;
 
-export {
-  onClientEntry,
-  wrapPageElement,
-  shouldUpdateScroll
-}
+export { onClientEntry, wrapPageElement, shouldUpdateScroll };
