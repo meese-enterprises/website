@@ -7,6 +7,7 @@ import styled from "styled-components";
 
 type Props = ServiceType;
 
+// TODO: Make cards look better and maintain shape on narrow screens
 const Service = ({
 	name,
 	description,
@@ -21,11 +22,12 @@ const Service = ({
 			}}
 		>
 			<ImageContainer>
-				<ProjectImage {...icon} />
-				<Title my={2} pb={1} color="darkPrimary">
-					{name}
-				</Title>
+				<ServiceImage {...icon} />
 			</ImageContainer>
+
+			<Title my={2} pb={1} color="darkPrimary">
+				{name}
+			</Title>
 		</Link>
 	</Card>
 );
@@ -38,13 +40,19 @@ const Title = styled(Text)`
 	font-size: 14px;
 	font-weight: 600;
 	text-transform: uppercase;
+	text-align: center;
 	display: table;
-	border-bottom: ${({ theme }) => theme.colors.primaryAccent} 5px solid;
-	width: calc(100% - ${CARD_HEIGHT});
+	width: calc(90%);
 	margin: 10px auto;
 
-	${MEDIA_QUERY_SMALL} {
-		width: calc(100% - (${CARD_HEIGHT} / 2));
+	/* https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
+	&:after {
+		content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 10px;
+    border-bottom: ${({ theme }) => theme.colors.primaryAccent} 5px solid;
 	}
 `;
 
@@ -57,7 +65,7 @@ const ImageContainer = styled.div`
 	}
 `;
 
-const ProjectImage = styled(Image)`
+const ServiceImage = styled(Image)`
 	width: calc(${CARD_HEIGHT} - 50px);
 	height: calc(${CARD_HEIGHT} - 50px);
 	display: block;

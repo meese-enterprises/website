@@ -20,7 +20,7 @@ const StyledLink = styled.a`
 		content: "";
 		width: 100%;
 		height: 3px;
-		background-color: ${({ theme }) => theme.colors.darkSecondary};
+		background-color: ${({ theme }) => theme.colors.primaryAccent};
 		transition: all 250ms;
 	}
 

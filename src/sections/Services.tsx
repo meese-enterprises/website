@@ -14,7 +14,7 @@ const Services = () => {
 		<Section.Container id={SECTION.services} Background={Background}>
 			<Section.Header name={SECTION.services} icon="💻" label="notebook" />
 
-			<CardContainer minWidth="300px">
+			<CardContainer minWidth="250px">
 				<Fade direction="down" cascade damping={0.5} triggerOnce>
 					{services.map((p, i) => (
 						<Service {...p} key={i} />
