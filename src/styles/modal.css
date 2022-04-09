@@ -52,52 +52,52 @@
 
 /* Modified from https://codepen.io/merrybottle/pen/PdwXYO */
 .closeButton {
-  background: none;
-  border: 0;
-  box-sizing: border-box;
-  color: transparent;
-  cursor: pointer;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
-  letter-spacing: 1.5px;
-  line-height: 90px;
-  outline: none;
-  overflow: hidden;
-  padding: 10px 0 0;
-  position: relative;
-  text-transform: uppercase;
-  transform: translate(-50%, -50%);
-  transition: all 0.2s ease-in;
-  width: 100px;
+	background: none;
+	border: 0;
+	box-sizing: border-box;
+	color: transparent;
+	cursor: pointer;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 18px;
+	letter-spacing: 1.5px;
+	line-height: 90px;
+	outline: none;
+	overflow: hidden;
+	padding: 10px 0 0;
+	position: relative;
+	text-transform: uppercase;
+	transform: translate(-50%, -50%);
+	transition: all 0.2s ease-in;
+	width: 100px;
 	float: right;
-  transform: scale(40%);
+	transform: scale(40%);
 }
 .closeButton::before,
 .closeButton::after {
-  background-color: black;
-  content: '';
-  display: block;
-  height: 3px;
-  left: 0;
-  position: absolute;
-  transform-origin: center left;
-  transition: all 0.2s ease-in;
-  width: 141.4214px;
-  z-index: -1;
+	background-color: black;
+	content: "";
+	display: block;
+	height: 3px;
+	left: 0;
+	position: absolute;
+	transform-origin: center left;
+	transition: all 0.2s ease-in;
+	width: 141.4214px;
+	z-index: -1;
 }
 .closeButton::before {
-  top: 0;
-  transform: rotate(45deg);
+	top: 0;
+	transform: rotate(45deg);
 }
 .closeButton::after {
-  bottom: 0;
-  transform: rotate(-45deg);
+	bottom: 0;
+	transform: rotate(-45deg);
 }
 .closeButton:hover {
-  color: var(--primaryColor);
+	color: var(--primaryColor);
 }
 .closeButton:hover::before,
 .closeButton:hover::after {
-  height: 50px;
-  transform: rotate(0deg);
+	height: 50px;
+	transform: rotate(0deg);
 }
