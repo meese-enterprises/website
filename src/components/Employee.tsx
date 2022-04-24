@@ -45,7 +45,8 @@ const EmployeeInfo = styled(Text)`
 	text-align: center;
 	display: table;
 	width: calc(90%);
-	margin: 10px auto;
+	margin: auto;
+	margin-bottom: 10px;
 
 	/* https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
 	&:after {

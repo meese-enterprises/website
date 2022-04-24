@@ -21,6 +21,7 @@ function RGBImages(image) {
 	const images = colors.map((color) => {
 		const img = image.cloneNode();
 		img.classList.add(`vhs-filter__${color}`);
+		img.title = "Break out the 3-D glasses!";
 		return img;
 	});
 

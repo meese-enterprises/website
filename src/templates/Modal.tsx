@@ -18,9 +18,7 @@ const Modal = ({ location }) => {
 				modal ? (
 					<React.Fragment>
 						<Link to={closeTo!}>
-							<button className="closeButton">
-								Close
-							</button>
+							<button className="closeButton"></button>
 						</Link>
 						{content}
 					</React.Fragment>
