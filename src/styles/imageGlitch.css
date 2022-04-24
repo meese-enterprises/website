@@ -12,7 +12,8 @@
 	margin: 0 auto;
 	border-radius: 25px;
 }
-.vhs-filter__r, .vhs-filter__g {
+.vhs-filter__r,
+.vhs-filter__g {
 	left: 0;
 	right: 0;
 	mix-blend-mode: screen;
