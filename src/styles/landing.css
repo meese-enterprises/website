@@ -31,6 +31,12 @@ nav {
 	margin-left: 10px;
 	text-shadow: -4px -4px var(--primaryColor), 4px 4px var(--secondaryColor);
 }
+.navSection {
+	text-shadow: 0 0 1px var(--light-text);
+}
+.navSection:hover {
+	text-shadow: 0 0 3px var(--light-text);
+}
 
 #home {
 	background-color: var(--dark-background);
@@ -80,12 +86,13 @@ nav {
 }
 
 #tagline {
-	font-family: "Lucida Console";
+	font-family: monospace;
 	font-size: 24px;
 	color: var(--light-text);
 	letter-spacing: -1px;
 	text-shadow: 0 0 3px var(--light-text);
 	margin-top: 35px;
+	word-spacing: -6.5px;
 }
 
 @media screen and (max-width: 500px) {

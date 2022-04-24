@@ -5,7 +5,6 @@ import { Fade } from "react-awesome-reveal";
 import SocialLink from "./SocialLink";
 import Link from "./Link";
 import { useSiteQuery } from "../queries/useSiteQuery";
-import { CONTENTFUL_URL, GATSBY_URL, NETLIFY_URL } from "../utils/constants";
 
 const Footer = () => {
 	const { companyName, socialLinks } = useSiteQuery();
@@ -16,11 +15,7 @@ const Footer = () => {
 				<Fade direction="left" triggerOnce>
 					<Text fontSize={[2, 3]} color="lightPrimary">
 						<span>{`© ${companyName} - Powered by `}</span>
-						<Link href={GATSBY_URL} footer>Gatsby</Link>
-						<span>, </span>
-						<Link href={CONTENTFUL_URL} footer>Contentful</Link>
-						<span> and </span>
-						<Link href={NETLIFY_URL} footer>Netlify</Link>{" "}
+						<Link href="https://github.com/meese-enterprises" footer>Open Source</Link>{" "}
 						<span role="img" aria-label="heart">
 							❤️
 						</span>

@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Landing from "../sections/Landing";
 import About from "../sections/About";
+import Employees from "../sections/Employees";
 import Services from "../sections/Services";
 import Projects from "../sections/Projects";
 import Footer from "../components/Footer";
@@ -14,6 +15,7 @@ const Home = () => (
 		<Header />
 		<Landing />
 		<About />
+		<Employees />
 		<Services />
 		<Projects />
 		<Footer />

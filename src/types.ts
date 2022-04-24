@@ -13,6 +13,14 @@ export type Favicon = {
 	src: string;
 };
 
+export type Employee = {
+	name: string;
+	role: string;
+	profilePhoto: Image;
+	description: string;
+	website?: string;
+};
+
 export type Service = {
 	name: string;
 	description: string;

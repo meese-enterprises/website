@@ -6,8 +6,8 @@ const getCompanyInformationEntry = (entry) =>
 	entry.sys.contentType.sys.id === "companyInformation";
 
 const LandingTemplate = require.resolve("./src/templates/Home.tsx");
-const ServiceModalTemplate = require.resolve(
-	"./src/templates/ServiceModal.tsx"
+const ModalTemplate = require.resolve(
+	"./src/templates/Modal.tsx"
 );
 const NotFoundTemplate = require.resolve("./src/templates/NotFound.tsx");
 
@@ -36,8 +36,8 @@ exports.createPages = async ({ actions }, themeOptions) => {
 	});
 
 	createPage({
-		path: "/serviceModal",
-		component: ServiceModalTemplate,
+		path: "/modal",
+		component: ModalTemplate,
 	});
 
 	createPage({

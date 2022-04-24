@@ -18,7 +18,6 @@ const Helmet = ({ theme }: Props) => {
 			<title>{title}</title>
 			<meta name="description" content={siteDescription} />
 			<link rel="shortcut icon" href={`https:${logo.favicon32.src}`} />
-			{/* TODO: Better theme color */}
 			<meta name="theme-color" content={theme.colors.darkPrimary} />
 			<meta name="image" content={`https:${logo.favicon32.src}`} />
 			<meta itemProp="name" content={title} />

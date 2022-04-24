@@ -10,11 +10,12 @@ import { SECTION } from "../utils/constants";
 const Projects = () => {
 	const projects = useProjectsQuery();
 
-	// TODO: Sort by date
+	// TODO: Sort by date (currently done manually)
 	return (
 		<Section.Container id={SECTION.projects} Background={Background}>
 			<Section.Header name={SECTION.projects} icon="💻" label="notebook" />
 
+			{/* TODO: Add an effect like the headers that changes the line color on hover */}
 			<CardContainer minWidth="350px">
 				<Fade direction="down" cascade damping={0.5} triggerOnce>
 					{projects.map((p, i) => (

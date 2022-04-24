@@ -18,6 +18,7 @@ const LandingPage = () => {
 
 	// Runs after the render, so the DOM elements are available
 	useEffect(() => {
+		// TODO: Try to improve the performance and appearance of this on Linux systems
 		new ScrambleLetters();
 	}, []);
 

@@ -1,0 +1,46 @@
+/**
+ * An image glitch effect, modified from the following:
+ * @link https://codepen.io/samdbeckham/pen/XBzQeK
+ */
+
+.vhs-filter {
+	overflow: hidden;
+	position: relative;
+}
+.vhs-filter img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 25px;
+}
+.vhs-filter__r, .vhs-filter__g {
+	left: 0;
+	right: 0;
+	mix-blend-mode: screen;
+	position: absolute;
+	top: 0;
+	transition: transform 0.4s;
+	z-index: 1;
+}
+.vhs-filter__r {
+	filter: url("#r");
+	transform: translate(0);
+}
+.vhs-filter__g {
+	filter: url("#g");
+
+	transform: translate(0);
+}
+.vhs-filter__b {
+	filter: url("#b");
+}
+
+.vhs-filter:hover .vhs-filter__r {
+	transform: translate(1px, 2px);
+}
+.vhs-filter:hover .vhs-filter__g {
+	transform: translate(-2px, -1px);
+}
+
+img {
+	max-width: 100%;
+}

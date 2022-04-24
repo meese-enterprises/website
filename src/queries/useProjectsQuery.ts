@@ -23,7 +23,9 @@ export type QueryResponse = {
 };
 
 export const useProjectsQuery = (): Project[] => {
-	const { contentfulCompanyInformation } =
+	const {
+		contentfulCompanyInformation: { projects },
+	} =
 		useStaticQuery<QueryResponse>(graphql`
 			query ProjectsQuery {
 				contentfulCompanyInformation {
@@ -47,7 +49,7 @@ export const useProjectsQuery = (): Project[] => {
 			}
 		`);
 
-	return contentfulCompanyInformation.projects.map(({ logo, ...rest }) => ({
+	return projects.map(({ logo, ...rest }) => ({
 		...rest,
 		logo: {
 			alt: logo.title,

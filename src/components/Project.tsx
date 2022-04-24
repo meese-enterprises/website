@@ -67,7 +67,7 @@ const Project = ({
 						{type}
 					</ImageLabel>
 					<Hide query="md">
-						<ImageLabel bg="muted" color="lightText">
+						<ImageLabel bg="muted" color="darkPrimary">
 							{publishedDate}
 						</ImageLabel>
 					</Hide>
@@ -78,7 +78,6 @@ const Project = ({
 );
 
 const CARD_HEIGHT = "200px";
-
 const MEDIA_QUERY_SMALL = "@media (max-width: 400px)";
 
 const Title = styled(Text)`
@@ -105,16 +104,13 @@ const ImageContainer = styled.div`
 	margin: auto;
 	width: ${CARD_HEIGHT};
 	height: ${CARD_HEIGHT};
-
-	${MEDIA_QUERY_SMALL} {
-		width: calc(${CARD_HEIGHT} / 2);
-	}
 `;
 
 const ProjectImage = styled(Image)`
 	width: ${CARD_HEIGHT};
 	height: ${CARD_HEIGHT};
 	padding: 40px;
+	border-radius: 25%;
 	margin-top: 0px;
 
 	${MEDIA_QUERY_SMALL} {

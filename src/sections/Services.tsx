@@ -28,22 +28,22 @@ const Services = () => {
 const Background = () => (
 	<>
 		<Triangle
-			color="lightSecondary"
-			height={["80vh", "80vh"]}
-			width={["100vw", "100vw"]}
-			position="top-right"
+			color="secondaryAccent"
+			height={["80vh", "70vh"]}
+			width={["100vw", "90vw"]}
+			position="top-left"
 		/>
 
 		<Triangle
 			color="lightPrimary"
-			height={["50vh", "20vh"]}
-			width={["50vw", "50vw"]}
-			position="top-right"
+			height={["35vh", "20vh"]}
+			width={["50vw", "40vw"]}
+			position="top-left"
 		/>
 
 		<Triangle
-			color="secondaryAccent"
-			height={["25vh", "40vh"]}
+			color="primaryAccent"
+			height={["35vh", "40vh"]}
 			width={["75vw", "60vw"]}
 			position="bottom-right"
 		/>

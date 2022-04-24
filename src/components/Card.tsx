@@ -14,10 +14,6 @@ export const CardContainer = styled.div<CardContainerProps>`
 		minmax(${({ minWidth }) => minWidth}, 1fr)
 	);
 	justify-items: center;
-
-	@media only screen and (max-width: 400px) {
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-	}
 `;
 
 export const Card = styled(CardRebass).attrs({
@@ -30,7 +26,12 @@ export const Card = styled(CardRebass).attrs({
 	transition: all 0.25s;
 	top: 0;
 	height: 100%;
+	width: 100%;
 	border-radius: 8px;
+	min-width: 200px;
+
+	/* Prevents hover jitter effect, credit to https://maximelafarie.com/avoid-css-flickering */
+	-webkit-transform: translate3d(0,0,0);
 
 	&:hover {
 		top: -10px;

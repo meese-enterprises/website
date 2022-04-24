@@ -8,6 +8,7 @@ import { useSiteQuery } from "../queries/useSiteQuery";
 import { SECTION } from "../utils/constants";
 import { getSectionHref } from "../utils/helpers";
 
+// TODO: Add a light/dark mode toggle
 const Header = () => {
 	const { logo } = useHelmetQuery();
 	const { companyName } = useSiteQuery();
@@ -37,7 +38,7 @@ const Header = () => {
 						.filter((id) => id !== "home")
 						.map((id) => (
 							<Box key={id} ml={[2, 3]} fontSize={[2, 3]}>
-								<Link href={`#${id}`} tabIndex={0}>
+								<Link href={`#${id}`} tabIndex={0} className="navSection">
 									{SECTION[id]}
 								</Link>
 							</Box>

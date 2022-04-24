@@ -36,14 +36,13 @@ GraphQL allows our site to request only the data that it needs and only when it 
 	https://gramadosummit.com/
 
 	IDEAS:
-	- https://codepen.io/alvarotrigo/pen/eYEPgON
-	- https://codepen.io/alvarotrigo/pen/ZEJqLzY
-	- https://codepen.io/MarcoGuglielmelli/pen/ExGYae
-	- https://codepen.io/Rowno/pen/EVEgJb
-	- https://codepen.io/alexcu21/pen/RYxjme
-	- https://codepen.io/Yusifalomeri/pen/PabqGO
-	- https://codepen.io/codycurley/pen/bdqevE
-	- https://codepen.io/jcoulterdesign/pen/vqOyLr
+	- https://codepen.io/alvarotrigo/pen/eYEPgON : Hypnotic shape-shifting background pattern
+	- https://codepen.io/alvarotrigo/pen/ZEJqLzY : Firefly background effect
+	- https://codepen.io/MarcoGuglielmelli/pen/ExGYae : Techy node effect that follows the mouse
+	- https://codepen.io/Rowno/pen/EVEgJb : Chameleon background effect
+	- https://codepen.io/alexcu21/pen/RYxjme : Animated text gradient
+	- https://codepen.io/Yusifalomeri/pen/PabqGO : Shifting geometric background pattern effect
+	- https://codepen.io/codycurley/pen/bdqevE : Drawing in text line-by-line
 	- VHS filter over entire page with https://i.pinimg.com/originals/5f/74/28/5f7428eb2927783782d5a5d2df8bf986.png
 
 	TODO:

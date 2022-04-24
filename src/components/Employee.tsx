@@ -2,16 +2,17 @@ import React from "react";
 import { Image, Text } from "rebass/styled-components";
 import { Card } from "./Card";
 import { Link } from "gatsby";
-import { Service as ServiceType } from "../types";
+import { Employee as EmployeeType } from "../types";
 import styled from "styled-components";
 
-type Props = ServiceType;
+type Props = EmployeeType;
 
 // TODO: Make cards look better and maintain shape on narrow screens
-const Service = ({
+const Employee = ({
+	profilePhoto,
 	name,
+	role,
 	description,
-	icon,
 }: Props) => (
 	<Card p={0}>
 		<Link
@@ -20,33 +21,31 @@ const Service = ({
 				modal: true,
 				description,
 			}}
+			style={{
+				textDecoration: "none",
+			}}
 		>
 			<ImageContainer>
-				<ServiceImage {...icon} />
+				<EmployeeImage {...profilePhoto} className="js-vhs-filter" />
 			</ImageContainer>
 
-			<Title my={2} pb={1} color="darkPrimary">
-				{name}
-			</Title>
+			<EmployeeInfo my={2} pb={1} color="darkPrimary">
+				<EmployeeName>{name}</EmployeeName>
+				<EmployeeRole>{role}</EmployeeRole>
+			</EmployeeInfo>
 		</Link>
 	</Card>
 );
 
-const CARD_SIZE = "200px";
+const CARD_HEIGHT = "250px";
 const MEDIA_QUERY_SMALL = "@media (max-width: 400px)";
 
-const Title = styled(Text)`
-	font-size: 14px;
+const EmployeeInfo = styled(Text)`
 	font-weight: 600;
-	text-transform: uppercase;
 	text-align: center;
 	display: table;
 	width: calc(90%);
 	margin: 10px auto;
-
-	${MEDIA_QUERY_SMALL} {
-		padding-bottom: calc(${CARD_SIZE} / 8);
-	}
 
 	/* https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
 	&:after {
@@ -59,30 +58,39 @@ const Title = styled(Text)`
 	}
 `;
 
+const EmployeeName = styled(Text)`
+	font-size: 20px;
+`;
+
+const EmployeeRole = styled(Text)`
+	font-size: 15px;
+	color: #A0A0A0;
+	margin-top: 5px;
+`;
+
 const ImageContainer = styled.div`
 	margin: auto;
-	width: ${CARD_SIZE};
+	width: ${CARD_HEIGHT};
 
 	${MEDIA_QUERY_SMALL} {
-		width: calc(${CARD_SIZE} / 2);
-		padding-top: calc(${CARD_SIZE} / 8);
+		width: calc(${CARD_HEIGHT} / 2);
 	}
 `;
 
-const ServiceImage = styled(Image)`
-	width: calc(${CARD_SIZE} - 50px);
-	height: calc(${CARD_SIZE} - 50px);
+const EmployeeImage = styled(Image)`
+	width: calc(${CARD_HEIGHT} - 50px);
+	height: calc(${CARD_HEIGHT} - 50px);
 	display: block;
 	padding: 20px;
 	margin: auto;
 	margin-top: 0px;
-	filter: grayscale(1);
 
 	${MEDIA_QUERY_SMALL} {
-		height: calc(${CARD_SIZE} / 2);
-		width: calc(${CARD_SIZE} / 2);
+		height: calc(${CARD_HEIGHT} / 2);
+		width: calc(${CARD_HEIGHT} / 2);
+		margin-top: calc(${CARD_HEIGHT} / 4);
 		padding: 10px;
 	}
 `;
 
-export default Service;
+export default Employee;

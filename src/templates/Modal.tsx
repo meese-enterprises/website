@@ -8,7 +8,7 @@ import { theme } from "../theme";
 import { Theme } from "@rebass/preset";
 
 // @ts-ignore
-const ServiceModal = ({ location }) => {
+const Modal = ({ location }) => {
 	const content = <ReactMarkdown children={location.state.description} components={components} />;
 
 	return <ThemeProvider theme={theme as Theme}>
@@ -35,4 +35,4 @@ const ServiceModal = ({ location }) => {
 }
 
 
-export default ServiceModal;
+export default Modal;
