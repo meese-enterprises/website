@@ -85,7 +85,27 @@ const Title = styled(Text)`
 	font-weight: 600;
 	text-transform: uppercase;
 	display: table;
-	border-bottom: ${({ theme }) => theme.colors.primaryAccent} 5px solid;
+	border-bottom: 5px solid ${({ theme }) => theme.colors.primaryAccent};
+	transition: 0.4s;
+	position: relative;
+
+	&:after {
+		content: "";
+		width: 0;
+		left: 0;
+		bottom: -5px;
+		position: absolute;
+		background: ${({ theme }) => theme.colors.secondaryAccent};
+		height: 5px;
+		transition-property: width;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+	}
+
+	&:focus:after,
+	&:hover:after {
+		width: 100%;
+	}
 `;
 
 const TextContainer = styled.div`

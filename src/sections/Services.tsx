@@ -12,7 +12,7 @@ const Services = () => {
 
 	return (
 		<Section.Container id={SECTION.services} Background={Background}>
-			<Section.Header name={SECTION.services} icon="💻" label="notebook" />
+			<Section.Header name={SECTION.services} icon="✨" label="sparkles" dark />
 
 			<CardContainer minWidth="250px">
 				<Fade direction="down" cascade damping={0.5} triggerOnce>

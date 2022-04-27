@@ -21,7 +21,7 @@ const Employees = () => {
 
 	return (
 		<Section.Container id={SECTION.employees} Background={Background}>
-			<Section.Header name={SECTION.employees} icon="🧙‍♂️" label="wizard" />
+			<Section.Header name={SECTION.employees} icon="🧙🏼‍♂️" label="wizard" />
 
 			<CardContainer minWidth="250px">
 				<Fade direction="down" cascade damping={0.5} triggerOnce>
@@ -32,7 +32,7 @@ const Employees = () => {
 			</CardContainer>
 
 			{/* From https://codepen.io/samdbeckham/pen/XBzQeK */}
-			<svg>
+			<svg style={{ height: "0px" }}>
 				<filter id="r">
 					<feColorMatrix
 						type="matrix"

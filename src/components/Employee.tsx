@@ -7,7 +7,6 @@ import styled from "styled-components";
 
 type Props = EmployeeType;
 
-// TODO: Make cards look better and maintain shape on narrow screens
 const Employee = ({
 	profilePhoto,
 	name,

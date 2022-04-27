@@ -77,6 +77,7 @@ const ServiceImage = styled(Image)`
 	margin: auto;
 	margin-top: 0px;
 	filter: grayscale(1);
+	pointer-events: none;
 
 	${MEDIA_QUERY_SMALL} {
 		height: calc(${CARD_SIZE} / 2);

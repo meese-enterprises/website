@@ -15,7 +15,7 @@ const Footer = () => {
 				<Fade direction="left" triggerOnce>
 					<Text fontSize={[2, 3]} color="lightPrimary">
 						<span>{`© ${companyName} - Powered by `}</span>
-						<Link href="https://github.com/meese-enterprises" footer>Open Source</Link>{" "}
+						<Link href="https://github.com/meese-enterprises" dark>Open Source</Link>{" "}
 						<span role="img" aria-label="heart">
 							❤️
 						</span>

@@ -7,19 +7,21 @@ import { SECTION } from "../utils/constants";
 import { getSectionHref } from "../utils/helpers";
 
 type ContainerProps = {
-	id?: SECTION;
+	id: SECTION;
 	children: ReactNode;
+	styles?: string;
 	Background?: () => JSX.Element;
 };
 
 const Container = ({
 	id,
 	children,
+	styles = "",
 	Background = DefaultBackground,
 }: ContainerProps) => (
 	<section id={id && getSectionHref(id)} style={{ position: "relative" }}>
 		<Background />
-		<SectionContainer>{children}</SectionContainer>
+		<SectionContainer styles={styles}>{children}</SectionContainer>
 	</section>
 );
 
@@ -28,12 +30,13 @@ type HeaderProps = {
 	icon?: string;
 	label?: string;
 	styles?: string;
+	dark?: boolean;
 };
 
-const Header = ({ name, icon, label, styles }: HeaderProps) => (
+const Header = ({ name, icon, label, styles, dark = false }: HeaderProps) => (
 	<Slide direction="left" triggerOnce>
 		<StyledHeading color="darkPrimary" mb={4} styles={styles}>
-			<Link selected>
+			<Link selected dark={dark}>
 				{name}
 				{icon && (
 					<span role="img" aria-label={label} style={{ marginLeft: "10px" }}>
@@ -49,7 +52,7 @@ const StyledHeading = styled(Heading)<{ styles?: string }>`
 	${({ styles }) => styles}
 `;
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.div<{ styles?: string }>`
 	min-height: 100vh;
 	min-width: 320px;
 	max-width: 1366px;
@@ -64,6 +67,8 @@ const SectionContainer = styled.div`
 	@media (max-width: 400px) {
 		padding: 2em 1em;
 	}
+
+	${({ styles }) => styles}
 `;
 
 const DefaultBackground = () => <div />;
