@@ -1,0 +1,94 @@
+.ReactModal__Overlay {
+	opacity: 0;
+	transition: opacity 500ms ease-out;
+}
+
+.ReactModal__Overlay--after-open {
+	opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+	opacity: 0;
+}
+
+.ReactModal__Content {
+	transform: translateY(50px);
+	transition: transform 500ms ease-out;
+	margin: auto;
+	position: relative;
+}
+
+.ReactModal__Content div:first-of-type {
+	margin-top: 10px;
+}
+.ReactModal__Content div {
+	margin-left: 15px;
+}
+
+.ReactModal__Content--after-open {
+	transform: translateY(0);
+}
+
+.ReactModal__Content--before-close {
+	transform: translateY(50px);
+}
+
+@media screen and (min-width: 1000px) {
+	.ReactModal__Content {
+		width: 80vw;
+		max-width: 800px;
+		height: 80vh;
+		max-height: 600px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.ReactModal__Content {
+		width: 80vw;
+		height: 60vh;
+		max-height: 600px;
+	}
+}
+
+/* Modified from https://codepen.io/merrybottle/pen/PdwXYO */
+.closeButton {
+	background: none;
+	border: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.2s ease-in;
+	width: 100px;
+	height: 100px;
+	float: right;
+	transform: scale(40%);
+	margin-top: -20px;
+	margin-right: -20px;
+}
+
+.closeButton::before,
+.closeButton::after {
+	background-color: black;
+	content: "";
+	display: block;
+	height: 3px;
+	left: 0;
+	position: absolute;
+	transform-origin: center left;
+	transition: all 0.2s ease-in;
+	width: 141.4214px;
+}
+.closeButton::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+.closeButton::after {
+	bottom: 0;
+	transform: rotate(-45deg);
+}
+.closeButton:hover::before,
+.closeButton:hover::after {
+	background-color: var(--primaryColor);
+}
