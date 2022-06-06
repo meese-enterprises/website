@@ -9,6 +9,7 @@ import { Theme } from "@rebass/preset";
 
 // @ts-ignore
 const Modal = ({ location }) => {
+	if (!location.state) return <></>;
 	const content = <ReactMarkdown children={location.state.description} components={components} />;
 
 	return <ThemeProvider theme={theme as Theme}>
