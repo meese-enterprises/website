@@ -52,7 +52,8 @@ const Project = ({
 								<SocialLink name="Homepage" icon="globe" url={homepage} invert />
 							</Box>
 						)}
-						{caseStudy && (
+						{/* Code below ignores the dummy links I need before there are any real case studies */}
+						{caseStudy && caseStudy !== homepage && (
 							<Box mx={1} fontSize={4}>
 								<SocialLink name="Case Study" icon="medium" url={caseStudy} invert />
 							</Box>
