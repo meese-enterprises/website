@@ -27,7 +27,7 @@ jobs:
       - name: Dry run the deployment
         uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          access-token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          access-token: ${{ secrets.GH_ACCESS_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
           skip-publish: true
