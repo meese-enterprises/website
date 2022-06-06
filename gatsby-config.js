@@ -1,8 +1,8 @@
 const assert = require("assert");
 const colors = require("./src/colors.json");
 
-const { ACCESS_TOKEN, SPACE_ID, DETERMINISTIC } = process.env;
-assert(ACCESS_TOKEN, "Contentful Access Token not provided");
+const { CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_SPACE_ID, DETERMINISTIC } = process.env;
+assert(CONTENTFUL_ACCESS_TOKEN, "Contentful Access Token not provided");
 assert(SPACE_ID, "Contentful Space ID not provided");
 
 module.exports = {
@@ -31,8 +31,8 @@ module.exports = {
 		{
 			resolve: "gatsby-source-contentful",
 			options: {
-				spaceId: SPACE_ID,
-				accessToken: ACCESS_TOKEN,
+				spaceId: CONTENTFUL_SPACE_ID,
+				accessToken: CONTENTFUL_ACCESS_TOKEN,
 			},
 		},
 	],

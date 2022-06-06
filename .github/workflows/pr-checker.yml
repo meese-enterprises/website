@@ -1,4 +1,4 @@
-name: Pr Checker
+name: PR Checker
 
 on:
   pull_request:
@@ -23,3 +23,13 @@ jobs:
       - run: yarn install --frozen-lockfile
 
       - run: yarn check-types
+
+      - name: Dry run the deployment
+        uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          deploy-branch: gh-pages
+          gatsby-args: --prefix-paths
+          skip-publish: true
+          CONTENTFUL_ACCESS_TOKEN: ${{secrets.CONTENTFUL_ACCESS_TOKEN}}
+          CONTENTFUL_SPACE_ID: ${{secrets.CONTENTFUL_SPACE_ID}}

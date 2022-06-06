@@ -10,8 +10,8 @@ const ModalTemplate = require.resolve("./src/templates/Modal.tsx");
 const NotFoundTemplate = require.resolve("./src/templates/NotFound.tsx");
 
 exports.sourceNodes = async (gatsbyConfig) => {
-	const { ACCESS_TOKEN, SPACE_ID } = process.env;
-	const client = createClient({ space: SPACE_ID, accessToken: ACCESS_TOKEN });
+	const { CONTENTFUL_ACCESS_TOKEN, CONTENTFUL_SPACE_ID } = process.env;
+	const client = createClient({ space: CONTENTFUL_SPACE_ID, accessToken: CONTENTFUL_ACCESS_TOKEN });
 
 	const { items } = await client.getEntries();
 	const companyInformation = items.find(getCompanyInformationEntry);
