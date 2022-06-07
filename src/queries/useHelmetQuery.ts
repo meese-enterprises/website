@@ -1,15 +1,15 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { Favicon } from "../types";
+import { Icon } from "../types";
 
 type QueryResponse = {
 	contentfulCompanyInformation: {
 		companyName: string;
 		siteDescription: string;
 		logo: {
-			favicon16: Favicon;
-			favicon32: Favicon;
-			bigIcon: Favicon;
-			appleIcon: Favicon;
+			favicon16: Icon;
+			favicon32: Icon;
+			bigIcon: Icon;
+			appleIcon: Icon;
 		};
 	};
 };

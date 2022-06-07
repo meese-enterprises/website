@@ -9,7 +9,7 @@ export type Image = {
 	alt: string;
 };
 
-export type Favicon = {
+export type Icon = {
 	src: string;
 };
 
