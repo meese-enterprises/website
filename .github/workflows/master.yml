@@ -23,7 +23,7 @@ jobs:
 
       - run: yarn install --frozen-lockfile
 
-      - uses: enriikke/gatsby-gh-pages-action@v2
+      - uses: meese-enterprises/gatsby-publish-without-jekyll@v2
         with:
           access-token: ${{ secrets.GH_ACCESS_TOKEN }}
           deploy-branch: gh-pages
