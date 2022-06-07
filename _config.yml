@@ -1,0 +1,3 @@
+# Jekyll configuration to include the generated `_gatsby` folder,
+# so the Pages site can access the images
+include: [ "_*" ]
