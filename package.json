@@ -2,8 +2,7 @@
 	"name": "meese.enterprises",
 	"private": true,
 	"version": "0.0.0",
-	"main": "index.js",
-	"license": "0BSD",
+	"license": "MIT",
 	"scripts": {
 		"clean": "env-cmd --silent gatsby clean",
 		"start": "env-cmd --silent gatsby develop",
