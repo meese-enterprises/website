@@ -6,7 +6,6 @@ assert(CONTENTFUL_ACCESS_TOKEN, "Contentful Access Token not provided");
 assert(CONTENTFUL_SPACE_ID, "Contentful Space ID not provided");
 
 module.exports = {
-	pathPrefix: "/website",
 	siteMetadata: {
 		deterministic: Boolean(DETERMINISTIC),
 	},
