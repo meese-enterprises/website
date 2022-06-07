@@ -10,7 +10,15 @@ type Props = {
 };
 
 const Helmet = ({ theme }: Props) => {
-	const baseUrl = useLocation().protocol + "//" + useLocation().host;
+	let baseUrl = "";
+	const { protocol, host } = useLocation();
+	if (protocol && host) {
+		baseUrl = `${protocol}//${host}`;
+	} else {
+		// TODO: Better method for this
+		baseUrl = "https://meese.enterprises";
+	}
+
 	const { companyName, siteDescription, logo } = useHelmetQuery();
 	const title = companyName;
 
