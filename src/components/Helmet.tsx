@@ -22,7 +22,7 @@ const Helmet = ({ theme }: Props) => {
 			<meta name="description" content={siteDescription} />
 			<meta name="image" content={`${baseUrl}${logo.favicon32.src}`} />
 			<link rel="shortcut icon" href={`${baseUrl}${logo.favicon32.src}`} />
-			<meta name="theme-color" content={theme.colors.darkPrimary} />
+			<meta name="theme-color" content={theme.colors.primaryAccent} />
 
 			<meta itemProp="name" content={title} />
 			<meta itemProp="description" content={siteDescription} />
