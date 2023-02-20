@@ -7,7 +7,7 @@ import { SECTION } from "../utils/constants";
 import { getSectionHref } from "../utils/helpers";
 
 type ContainerProps = {
-	id: SECTION;
+	id?: SECTION;
 	children: ReactNode;
 	styles?: string;
 	Background?: () => JSX.Element;

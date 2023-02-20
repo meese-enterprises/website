@@ -99,7 +99,7 @@ class WrapPageElement extends React.Component {
 			// Not rendering the current page as a modal, but we may be in the process of animating
 			// the old modal content to close, so render the last modal content we have cached
 
-			modalElement = React.createElement(_.get(lastModalProps, "pageResources.component"), {
+			modalElement = React.createElement(_.get(lastModalProps!, "pageResources.component"), {
 				// @ts-ignores
 				...lastModalProps,
 				key: _.get(lastModalProps, "pageResources.page.path"),

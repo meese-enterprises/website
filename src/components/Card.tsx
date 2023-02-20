@@ -31,6 +31,7 @@ export const Card = styled(CardRebass).attrs({
 	min-width: 200px;
 
 	/* Prevents hover jitter effect, credit to https://maximelafarie.com/avoid-css-flickering */
+	transform: translate3d(0,0,0);
 	-webkit-transform: translate3d(0,0,0);
 
 	&:hover {
