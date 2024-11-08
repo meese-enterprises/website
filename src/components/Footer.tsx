@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components";
-import { Box, Flex } from "rebass/styled-components";
-import { Fade } from "react-awesome-reveal";
 import SocialLink from "./SocialLink";
+import styled from "styled-components";
+import { Box } from "rebass/styled-components";
+import { Fade } from "react-awesome-reveal";
 import { useSiteQuery } from "../queries/useSiteQuery";
 
 const Footer = () => {
