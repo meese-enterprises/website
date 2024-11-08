@@ -5,8 +5,8 @@ import "./src/styles/scramble.css";
 import "./src/styles/modal.css";
 import "./src/styles/imageGlitch.css";
 
-// @ts-ignores
-import wrapPageElement from "./src/utils/wrapPageElement";
+import { wrapPageElement } from "./src/utils/wrapPageElement";
+
 const onClientEntry = (_args) => {
 	Modal.setAppElement("#___gatsby");
 };
