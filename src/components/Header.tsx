@@ -1,14 +1,12 @@
 import React from "react";
 import Headroom from "react-headroom";
-import { Box, Link as RebassLink, Flex, Image } from "rebass/styled-components";
+import { Link as RebassLink, Flex, Image } from "rebass/styled-components";
 import styled from "styled-components";
-import Link from "./Link";
 import { useHelmetQuery } from "../queries/useHelmetQuery";
 import { useSiteQuery } from "../queries/useSiteQuery";
 import { SECTION } from "../utils/constants";
 import { getSectionHref } from "../utils/helpers";
 
-// TODO: Add a light/dark mode toggle
 const Header = () => {
 	const { logo } = useHelmetQuery();
 	const { companyName } = useSiteQuery();
@@ -33,17 +31,6 @@ const Header = () => {
 						/>
 					</Flex>
 				</RebassLink>
-				<Flex mr={[0, 3, 5]}>
-					{(Object.keys(SECTION) as Array<keyof typeof SECTION>)
-						.filter((id) => id !== "home")
-						.map((id) => (
-							<Box key={id} ml={[2, 3]} fontSize={[2, 3]}>
-								<Link href={`#${id}`} tabIndex={0} className="navSection">
-									{SECTION[id]}
-								</Link>
-							</Box>
-						))}
-				</Flex>
 			</Flex>
 		</StyledHeadroom>
 	);

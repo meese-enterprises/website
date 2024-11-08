@@ -3,11 +3,10 @@ import React, { useEffect } from "react";
 import { Text } from "rebass/styled-components";
 
 // Internal imports
-import ScrollIcon from "../components/ScrollIcon";
+import Footer from "../components/Footer";
 import ScrambleLetters from "../utils/scramble";
 import Section from "../components/Section";
 import { SECTION } from "../utils/constants";
-import { getSectionHref } from "../utils/helpers";
 import { useLandingPageQuery } from "../queries/useLandingPageQuery";
 
 const LandingPage = () => {
@@ -21,7 +20,6 @@ const LandingPage = () => {
 
 	// Runs after the render, so the DOM elements are available
 	useEffect(() => {
-		// TODO: Try to improve the performance and appearance of this on Linux systems
 		new ScrambleLetters();
 	}, []);
 
@@ -72,7 +70,7 @@ const LandingPage = () => {
 				{tagline}
 			</Text>
 
-			<ScrollIcon href={`#${getSectionHref(SECTION.about)}`} />
+			<Footer />
 		</Section.Container>
 	);
 };

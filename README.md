@@ -49,3 +49,17 @@ GraphQL allows our site to request only the data that it needs and only when it 
 	- Support Drupal and display badge: https://www.drupal.org/association/campaign/become-a-member-2021
 
 -->
+
+## Development
+
+```sh
+# Use the correct Node version
+nvm install
+nvm use
+
+# Install dependencies
+yarn install
+
+# Run the development server
+yarn run start
+```
