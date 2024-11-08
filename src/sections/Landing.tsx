@@ -1,8 +1,11 @@
+// External imports
 import React, { useEffect } from "react";
 import { Text } from "rebass/styled-components";
-import Section from "../components/Section";
+
+// Internal imports
 import ScrollIcon from "../components/ScrollIcon";
 import ScrambleLetters from "../utils/scramble";
+import Section from "../components/Section";
 import { SECTION } from "../utils/constants";
 import { getSectionHref } from "../utils/helpers";
 import { useLandingPageQuery } from "../queries/useLandingPageQuery";

@@ -1,11 +1,14 @@
+// External imports
 import React, { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
+
+// Internal imports
 import Section from "../components/Section";
-import { CardContainer } from "../components/Card";
 import Triangle from "../components/Triangle";
 import Employee from "../components/Employee";
-import { useEmployeesQuery } from "../queries/useEmployeesQuery";
+import { CardContainer } from "../components/Card";
 import { SECTION } from "../utils/constants";
+import { useEmployeesQuery } from "../queries/useEmployeesQuery";
 
 // @ts-ignore
 import { VHSify } from "../utils/imageGlitch";

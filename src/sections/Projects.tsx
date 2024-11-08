@@ -1,11 +1,14 @@
+// External imports
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import Section from "../components/Section";
-import { CardContainer } from "../components/Card";
-import Triangle from "../components/Triangle";
+
+// Internal imports
 import Project from "../components/Project";
-import { useProjectsQuery } from "../queries/useProjectsQuery";
+import Section from "../components/Section";
+import Triangle from "../components/Triangle";
+import { CardContainer } from "../components/Card";
 import { SECTION } from "../utils/constants";
+import { useProjectsQuery } from "../queries/useProjectsQuery";
 
 const Projects = () => {
 	const projects = useProjectsQuery();

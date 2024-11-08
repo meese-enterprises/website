@@ -1,11 +1,14 @@
+// External imports
 import React from "react";
 import { Fade } from "react-awesome-reveal";
+
+// Internal imports
 import Section from "../components/Section";
-import { CardContainer } from "../components/Card";
-import Triangle from "../components/Triangle";
 import Service from "../components/Service";
-import { useServicesQuery } from "../queries/useServicesQuery";
+import Triangle from "../components/Triangle";
+import { CardContainer } from "../components/Card";
 import { SECTION } from "../utils/constants";
+import { useServicesQuery } from "../queries/useServicesQuery";
 
 const Services = () => {
 	const services = useServicesQuery();

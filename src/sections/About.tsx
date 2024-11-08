@@ -1,13 +1,16 @@
+// External imports
 import React from "react";
-import { Box, Image, Flex } from "rebass/styled-components";
-import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
+import styled from "styled-components";
+import { Box, Image, Flex } from "rebass/styled-components";
 import { Fade } from "react-awesome-reveal";
+
+// Internal imports
 import Section from "../components/Section";
 import Triangle from "../components/Triangle";
 import components from "../components/MarkdownComponents";
-import { useAboutQuery } from "../queries/useAboutQuery";
 import { SECTION } from "../utils/constants";
+import { useAboutQuery } from "../queries/useAboutQuery";
 
 const About = () => {
 	const { markdown, logo } = useAboutQuery();
