@@ -1,35 +1,36 @@
 import React from "react";
 import styled from "styled-components";
-import { Text, Box, Flex } from "rebass/styled-components";
+import { Box, Flex } from "rebass/styled-components";
 import { Fade } from "react-awesome-reveal";
 import SocialLink from "./SocialLink";
-import Link from "./Link";
 import { useSiteQuery } from "../queries/useSiteQuery";
 
 const Footer = () => {
-	const { companyName, socialLinks } = useSiteQuery();
+	const { socialLinks } = useSiteQuery();
 
 	return (
-		<Box p={[2, 3]} backgroundColor="secondaryAccent" id="footer" as="footer">
+		<Box
+			p={[2, 3]}
+			backgroundColor="darkPrimary"
+			id="footer"
+			as="footer"
+			style={{
+				position: "absolute",
+				bottom: 0,
+				left: 0,
+				right: 0,
+				width: "fit-content",
+				margin: "auto",
+			}}
+		>
 			<FooterContainer>
-				<Fade direction="left" triggerOnce>
-					<Text fontSize={[2, 3]} color="lightPrimary">
-						<span>{`© ${companyName} - Powered by `}</span>
-						<Link href="https://github.com/meese-enterprises" dark>Open Source</Link>{" "}
-						<span role="img" aria-label="heart">
-							❤️
-						</span>
-					</Text>
+				<Fade direction="right" triggerOnce cascade damping={0.5}>
+					{socialLinks.map((sl) => (
+						<Box mx={[2, 3]} fontSize={[4, 5]} key={sl.name}>
+							<SocialLink {...sl} />
+						</Box>
+					))}
 				</Fade>
-				<Flex>
-					<Fade direction="right" triggerOnce cascade damping={0.5}>
-						{socialLinks.map((sl) => (
-							<Box mx={[2, 3]} fontSize={[4, 5]} key={sl.name}>
-								<SocialLink {...sl} />
-							</Box>
-						))}
-					</Fade>
-				</Flex>
 			</FooterContainer>
 		</Box>
 	);
